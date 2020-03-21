@@ -1,0 +1,52 @@
+[
+	{
+		"name": "Bildungseinrichtungen",
+		"icon": "some-icon.png",
+		"description": "...",
+		"effectivity": "5",
+		"consequence": [
+			{
+				"target":"one of HEALTH_SYSTEM, SATISFACTION, ECONOMY",
+				"icon":"xyz.png",
+				"description":"...",
+				"type":"one of INSTANT, DAILY",
+				"value": "5",
+				"source":""
+			},
+			{
+				"target":"one of HEALTH_SYSTEM, SATISFACTION, ECONOMY",
+				"icon":"xyz.png",
+				"description":"...",
+				"type":"one of INSTANT, DAILY",
+				"value": "5",
+				"source":""
+			},
+			{
+				"target":"one of HEALTH_SYSTEM, SATISFACTION, ECONOMY",
+				"icon":"xyz.png",
+				"description":"...",
+				"type":"one of INSTANT, DAILY",
+				"value": "5",
+				"source":""
+			}
+		],
+		"costs": [
+			{
+				"target":"one of CRITICAL_CARE_BEDS, SECURITY_RESSOURCES, CASH",
+				"icon":"xyz.png",
+				"description":"...",
+				"type":"one of INSTANT, DAILY",
+				"value": "5",
+				"source":""
+			},
+			{
+				"target":"one of CRITICAL_CARE_BEDS, SECURITY_RESSOURCES, CASH",
+				"icon":"xyz.png",
+				"description":"...",
+				"type":"one of INSTANT, DAILY",
+				"value": "5",
+				"source":""
+			}
+		]
+	}
+]
