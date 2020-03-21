@@ -1,22 +1,23 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes and Scripts/Karten.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Background_Viren.jpg" type="Texture" id=2]
 [ext_resource path="res://Assets/Green.png" type="Texture" id=3]
+[ext_resource path="res://cards_corona_bg_music_loop.wav" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Fonts/Carlito-Bold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Assets/Fonts/Carlito-Regular.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Scenes and Scripts/Game.gd" type="Script" id=8]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 25
 font_data = ExtResource( 7 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=2]
 content_margin_left = 10.0
 content_margin_right = 10.0
 bg_color = Color( 0.313726, 0.313726, 0.313726, 1 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=3]
 content_margin_left = 10.0
 content_margin_right = 10.0
 bg_color = Color( 0, 0, 0, 0 )
@@ -25,7 +26,7 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 border_width_left = 1
 border_width_top = 1
@@ -33,24 +34,24 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=5]
 size = 25
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=6]
 size = 29
 font_data = ExtResource( 6 )
 
-[sub_resource type="Theme" id=9]
+[sub_resource type="Theme" id=7]
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.313726, 0.313726, 0.313726, 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=9]
 size = 34
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.313726, 0.313726, 0.313726, 1 )
 
 [node name="Game" type="Node2D"]
@@ -80,7 +81,7 @@ margin_left = 1583.68
 margin_top = 978.038
 margin_right = 1852.68
 margin_bottom = 1026.04
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Tag beenden"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -93,10 +94,10 @@ margin_left = 606.149
 margin_top = 58.0
 margin_right = 1854.15
 margin_bottom = 714.0
-custom_styles/tab_fg = SubResource( 5 )
-custom_styles/tab_bg = SubResource( 6 )
-custom_styles/panel = SubResource( 7 )
-custom_fonts/font = SubResource( 8 )
+custom_styles/tab_fg = SubResource( 2 )
+custom_styles/tab_bg = SubResource( 3 )
+custom_styles/panel = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 tab_align = 0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -145,7 +146,7 @@ margin_left = 23.0
 margin_top = 541.0
 margin_right = 279.0
 margin_bottom = 581.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Gesamtbevölkerung:
 80.000.000"
@@ -158,7 +159,7 @@ margin_left = 351.0
 margin_top = 542.0
 margin_right = 462.0
 margin_bottom = 582.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Infizierte:
 80.000.000"
@@ -196,10 +197,10 @@ __meta__ = {
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
+margin_left = 1.0
+margin_top = 37.0
+margin_right = -1.0
+margin_bottom = -1.0
 
 [node name="Line2D" type="Line2D" parent="Control/TabContainer/Wirtschaft"]
 position = Vector2( 67.4633, 505.989 )
@@ -210,10 +211,10 @@ default_color = Color( 1, 0.337255, 0.286275, 1 )
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
+margin_left = 1.0
+margin_top = 37.0
+margin_right = -1.0
+margin_bottom = -1.0
 
 [node name="Line2D2" type="Line2D" parent="Control/TabContainer/Politik"]
 position = Vector2( 141.488, 561.507 )
@@ -225,7 +226,7 @@ margin_left = 64.0
 margin_top = 58.0
 margin_right = 520.0
 margin_bottom = 426.0
-theme = SubResource( 9 )
+theme = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -233,8 +234,8 @@ __meta__ = {
 [node name="Label2" type="Label" parent="Control/VBoxContainer"]
 margin_right = 456.0
 margin_bottom = 35.0
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Aktuelles"
 align = 1
@@ -243,12 +244,12 @@ uppercase = true
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
 margin_top = 39.0
 margin_right = 456.0
-margin_bottom = 143.0
+margin_bottom = 140.0
 size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer"]
 margin_right = 150.0
-margin_bottom = 104.0
+margin_bottom = 101.0
 size_flags_horizontal = 3
 texture = ExtResource( 3 )
 expand = true
@@ -257,7 +258,7 @@ stretch_mode = 6
 [node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer"]
 margin_left = 154.0
 margin_right = 456.0
-margin_bottom = 104.0
+margin_bottom = 101.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
@@ -270,17 +271,17 @@ desto
 valign = 1
 
 [node name="HSeparator" type="HSeparator" parent="Control/VBoxContainer"]
-margin_top = 147.0
+margin_top = 144.0
 margin_right = 456.0
-margin_bottom = 151.0
+margin_bottom = 148.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer"]
-margin_top = 155.0
+margin_top = 152.0
 margin_right = 456.0
-margin_bottom = 259.0
+margin_bottom = 253.0
 size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
@@ -288,7 +289,7 @@ __meta__ = {
 
 [node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer2"]
 margin_right = 150.0
-margin_bottom = 104.0
+margin_bottom = 101.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 3 )
@@ -298,7 +299,7 @@ stretch_mode = 6
 [node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer2"]
 margin_left = 154.0
 margin_right = 456.0
-margin_bottom = 104.0
+margin_bottom = 101.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
@@ -311,17 +312,17 @@ größe"
 valign = 1
 
 [node name="HSeparator2" type="HSeparator" parent="Control/VBoxContainer"]
-margin_top = 263.0
+margin_top = 257.0
 margin_right = 456.0
-margin_bottom = 267.0
+margin_bottom = 261.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Control/VBoxContainer"]
-margin_top = 271.0
+margin_top = 265.0
 margin_right = 456.0
-margin_bottom = 376.0
+margin_bottom = 368.0
 size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
@@ -329,7 +330,7 @@ __meta__ = {
 
 [node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer3"]
 margin_right = 150.0
-margin_bottom = 105.0
+margin_bottom = 103.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 3 )
@@ -339,7 +340,7 @@ stretch_mode = 6
 [node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer3"]
 margin_left = 154.0
 margin_right = 456.0
-margin_bottom = 105.0
+margin_bottom = 103.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
@@ -363,8 +364,8 @@ __meta__ = {
 [node name="Label" type="Label" parent="Control/VBoxContainer2"]
 margin_right = 453.0
 margin_bottom = 35.0
-custom_styles/normal = SubResource( 11 )
-custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Ressourcen"
 align = 1
@@ -382,7 +383,7 @@ __meta__ = {
 margin_right = 453.0
 margin_bottom = 30.0
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Geld: 0$"
 __meta__ = {
@@ -394,7 +395,7 @@ margin_top = 34.0
 margin_right = 453.0
 margin_bottom = 64.0
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Grundversorgung"
 __meta__ = {
@@ -406,7 +407,7 @@ margin_top = 68.0
 margin_right = 453.0
 margin_bottom = 98.0
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Krankenhausbetten"
 __meta__ = {
@@ -418,7 +419,7 @@ margin_top = 102.0
 margin_right = 453.0
 margin_bottom = 132.0
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Sicherheitskräfte"
 __meta__ = {
@@ -427,3 +428,8 @@ __meta__ = {
 
 [node name="Karten" parent="." instance=ExtResource( 1 )]
 [connection signal="pressed" from="Control/Button_TagEnde" to="." method="_on_Button_TagEnde_pressed"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.097
+autoplay = true

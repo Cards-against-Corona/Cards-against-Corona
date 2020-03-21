@@ -1,11 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/card_frame.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Fonts/Carlito-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Fonts/Carlito-Italic.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 17
+font_data = ExtResource( 3 )
 
 [node name="EineKarte" type="TextureButton"]
 margin_left = -112.0
@@ -19,7 +28,7 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 
-[node name="Label" type="Label" parent="."]
+[node name="Handlung" type="Label" parent="."]
 margin_left = 53.2067
 margin_top = 212.905
 margin_right = 194.207
@@ -28,6 +37,30 @@ custom_fonts/font = SubResource( 1 )
 text = "Handlung XY"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Effektivität" type="Label" parent="."]
+margin_left = 5.42139
+margin_top = 208.182
+margin_right = 51.4214
+margin_bottom = 246.182
+custom_fonts/font = SubResource( 2 )
+text = "10"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Beschreibung" type="Label" parent="."]
+margin_left = 13.0
+margin_top = 251.0
+margin_right = 201.0
+margin_bottom = 294.0
+custom_fonts/font = SubResource( 3 )
+text = "Hier und da bla bla bla"
 __meta__ = {
 "_edit_use_anchors_": false
 }
