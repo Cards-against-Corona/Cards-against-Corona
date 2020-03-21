@@ -10,10 +10,6 @@ size = 40
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 40
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=3]
 size = 25
 font_data = ExtResource( 7 )
 
@@ -35,7 +31,7 @@ margin_top = 65.0227
 margin_right = 242.738
 margin_bottom = 116.023
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Geld: 0$"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -47,7 +43,7 @@ margin_top = 127.961
 margin_right = 353.703
 margin_bottom = 178.962
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Grundversorgung"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -59,7 +55,7 @@ margin_top = 175.794
 margin_right = 351.185
 margin_bottom = 226.795
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Krankenhausbetten"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -71,7 +67,7 @@ margin_top = 234.0
 margin_right = 365.0
 margin_bottom = 274.0
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Sicherheitskräfte"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -82,7 +78,7 @@ margin_left = 542.05
 margin_top = 45.5896
 margin_right = 777.05
 margin_bottom = 96.5896
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Zufriedenheit:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -93,7 +89,7 @@ margin_left = 622.611
 margin_top = 176.501
 margin_right = 817.611
 margin_bottom = 227.501
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Infizierte: 1"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -104,7 +100,7 @@ margin_left = 617.576
 margin_top = 126.151
 margin_right = 812.576
 margin_bottom = 177.151
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Gesunde: 79.999.999"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -115,7 +111,7 @@ margin_left = 622.611
 margin_top = 219.299
 margin_right = 817.611
 margin_bottom = 270.299
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Tote: 0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -126,7 +122,7 @@ margin_left = 64.3745
 margin_top = 419.456
 margin_right = 333.374
 margin_bottom = 467.456
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "Tag beenden"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -148,3 +144,5 @@ scale = Vector2( 24.1408, 9.6842 )
 points = PoolVector2Array( 29.7604, -48.1293, 23.1322, -14.56, 20.2704, -8.61493, 9.52896, -1.85589, 5.35855, -1.04365, 2.55993, -0.498581, 0, 0 )
 width = 0.5
 default_color = Color( 1, 0.337255, 0.286275, 1 )
+
+[node name="Karten" parent="." instance=ExtResource( 1 )]
