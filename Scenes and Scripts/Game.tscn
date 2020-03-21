@@ -427,9 +427,9 @@ __meta__ = {
 }
 
 [node name="Karten" parent="." instance=ExtResource( 1 )]
-[connection signal="pressed" from="Control/Button_TagEnde" to="." method="_on_Button_TagEnde_pressed"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 volume_db = -10.097
 autoplay = true
+[connection signal="pressed" from="Control/Button_TagEnde" to="." method="_on_Button_TagEnde_pressed"]

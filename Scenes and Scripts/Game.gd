@@ -27,6 +27,8 @@ var wirk_Tote = 0
 # Anzahl der Gesunden
 var wirk_Gesunde = 0
 
+var logic = load("res://Scenes and Scripts/Logic.gd").new()
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -46,17 +48,21 @@ func _on_Geld_draw():
 
 func _on_Button_TagEnde_pressed():
 	# trigger events?
+	logic.FinishDay()
+	
+	print(logic.newInfected[-1])
 	
 	# calculate infection counts --> mit Mechanikern koordinieren
-	var arr = [1, 2, 3] # TESTARRAY
+	 # TESTARRAY
+	#var arr = [1, 2, 3]
 	
 	# calculate other values
 	
 	# update main window
 	# update infection counters
-	$"Control/TabContainer/COVID-19 Zahlen/Label_Infizierte".text = "Infizierte:\n" + str(arr.find_last())
-	$"Control/TabContainer/COVID-19 Zahlen/Label_Tote".text = "Tote:\n" + str(15)
-	$"Control/TabContainer/COVID-19 Zahlen/Label_Genesene".text = "Genesene:\n" + str(15)
+	$"Control/TabContainer/COVID-19 Zahlen/Label_Infizierte".text = "Infizierte:\n" + str(int(round(logic.infectedByDay[-1])))
+	$"Control/TabContainer/COVID-19 Zahlen/Label_Tote".text = "Tote:\n" + str(int(round(logic.deadByDay[-1])))
+	$"Control/TabContainer/COVID-19 Zahlen/Label_Genesene".text = "Genesene:\n" + str(int(round(logic.curedByDay[-1])))
 	
 	# update other KPIs
 	
@@ -64,12 +70,12 @@ func _on_Button_TagEnde_pressed():
 	# for Covid-Screen: -200;80 -> 750;400
 	
 	# arr wird durch werte z.B. Anzahl infizierte ersetzt
-	var y_max = arr.max()
-	var y_min = arr.min()
+	#var y_max = arr.max()
+	#var y_min = arr.min()
 		
 	
-	for y in range(arr.size()):
-		print(y)
+	#for y in range(arr.size()):
+	#	print(y)
 	
 	# enter new entries to the newsfeed
 	
