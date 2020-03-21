@@ -1,0 +1,201 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/hellblau.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Red.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Green.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Purple.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Blue.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Fonts/Carlito-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/Fonts/Carlito-Regular.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 25
+font_data = ExtResource( 7 )
+
+[node name="Game" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+margin_left = -2.65002
+margin_top = 2.65005
+margin_right = 1084.35
+margin_bottom = 1926.65
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Eventcard" type="TextureButton" parent="Control"]
+margin_left = 304.85
+margin_top = 569.2
+margin_right = 808.85
+margin_bottom = 1208.2
+texture_normal = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/Eventcard"]
+margin_left = 31.8184
+margin_top = 46.0
+margin_right = 468.818
+margin_bottom = 585.0
+custom_fonts/font = SubResource( 1 )
+text = "Menschen fangen an in Deutschland Klopapier zu hamstern. Was tun?"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Auswahlcard" type="TextureButton" parent="Control"]
+margin_left = 818.506
+margin_top = 1582.56
+margin_right = 1046.51
+margin_bottom = 1810.56
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/Auswahlcard"]
+margin_left = 11.0
+margin_top = 14.0
+margin_right = 214.0
+margin_bottom = 217.0
+custom_fonts/font = SubResource( 2 )
+text = "Klaue von denen das Klopapier"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Auswahlcard2" type="TextureButton" parent="Control"]
+margin_left = 563.045
+margin_top = 1582.72
+margin_right = 791.045
+margin_bottom = 1810.72
+texture_normal = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control/Auswahlcard2"]
+margin_left = 11.5698
+margin_top = 13.8457
+margin_right = 214.57
+margin_bottom = 216.846
+custom_fonts/font = SubResource( 2 )
+text = "Klopapierpreise erhöhen"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Auswahlcard3" type="TextureButton" parent="Control"]
+margin_left = 304.958
+margin_top = 1582.72
+margin_right = 532.958
+margin_bottom = 1810.72
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Control/Auswahlcard3"]
+margin_left = 11.9019
+margin_top = 15.277
+margin_right = 214.902
+margin_bottom = 218.277
+custom_fonts/font = SubResource( 2 )
+text = "Die Menschen zum Aufhören von Hamstern überzeugen"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Auswahlcard4" type="TextureButton" parent="Control"]
+margin_left = 40.5336
+margin_top = 1582.72
+margin_right = 268.534
+margin_bottom = 1810.72
+texture_normal = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Control/Auswahlcard4"]
+margin_left = 12.5413
+margin_top = 13.7701
+margin_right = 215.541
+margin_bottom = 216.77
+custom_fonts/font = SubResource( 2 )
+text = "Produktion von Klopapier ankurbeln"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Geld" type="Label" parent="Control"]
+margin_left = 44.0449
+margin_top = 49.9175
+margin_right = 215.045
+margin_bottom = 100.918
+custom_fonts/font = SubResource( 3 )
+text = "Geld: 0$"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ansehen" type="Label" parent="Control"]
+margin_left = 46.0955
+margin_top = 184.054
+margin_right = 241.096
+margin_bottom = 235.054
+custom_fonts/font = SubResource( 3 )
+text = "Ansehen:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control"]
+margin_left = 698.793
+margin_top = 354.0
+margin_right = 967.793
+margin_bottom = 402.0
+custom_fonts/font = SubResource( 4 )
+text = "Offiziell Infizierten"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+margin_left = 215.439
+margin_top = 187.192
+margin_right = 473.439
+margin_bottom = 215.192
+value = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GraphEdit" type="GraphEdit" parent="Control"]
+margin_left = 178.518
+margin_top = 604.222
+margin_right = 989.518
+margin_bottom = 1138.22
+scroll_offset = Vector2( -40, -40 )
