@@ -34,8 +34,9 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	$Control/Geld.set_text("Geld: " + str(res_Geld) + "$")
+	$Control/ProgressBar.value = wirk_Zufriedenheit
 
 
 

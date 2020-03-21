@@ -114,4 +114,5 @@ __meta__ = {
 [connection signal="pressed" from="ScrollContainer/HBoxContainer/1" to="." method="_on_1_pressed"]
 [connection signal="pressed" from="ScrollContainer/HBoxContainer/2" to="." method="_on_2_pressed"]
 [connection signal="pressed" from="ScrollContainer/HBoxContainer/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="Infoübersicht/Aktivieren" to="." method="_on_Aktivieren_pressed"]
 [connection signal="pressed" from="Infoübersicht/Schließen" to="." method="_on_Schlieen_pressed"]
