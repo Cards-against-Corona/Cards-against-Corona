@@ -129,10 +129,12 @@ __meta__ = {
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="Control"]
-margin_left = 791.954
+margin_left = 790.447
 margin_top = 58.7976
-margin_right = 1049.95
+margin_right = 1048.44
 margin_bottom = 86.7976
+max_value = 100.0
+step = 1.0
 value = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
