@@ -139,10 +139,9 @@ __meta__ = {
 }
 
 [node name="Line2D" type="Line2D" parent="Control"]
-position = Vector2( 247.132, 741.694 )
-scale = Vector2( 24.1408, 9.6842 )
-points = PoolVector2Array( 29.7604, -48.1293, 23.1322, -14.56, 20.2704, -8.61493, 9.52896, -1.85589, 5.35855, -1.04365, 2.55993, -0.498581, 0, 0 )
-width = 0.5
+position = Vector2( 593.198, 662.117 )
+points = PoolVector2Array( 0, 0, 316.836, -44.0809, 611.084, -168.072, 740.627, -388.296 )
+width = 1.0
 default_color = Color( 1, 0.337255, 0.286275, 1 )
 
 [node name="Karten" parent="." instance=ExtResource( 1 )]
