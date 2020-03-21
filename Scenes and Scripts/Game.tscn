@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Assets/hellblau.png" type="Texture" id=1]
+[ext_resource path="res://Scenes and Scripts/Karten.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Fonts/Carlito-Bold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Assets/Fonts/Carlito-Regular.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Scenes and Scripts/Game.gd" type="Script" id=8]
@@ -9,11 +9,7 @@
 size = 40
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=3]
-size = 40
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=2]
 size = 25
 font_data = ExtResource( 7 )
 
@@ -21,33 +17,10 @@ font_data = ExtResource( 7 )
 script = ExtResource( 8 )
 
 [node name="Control" type="Control" parent="."]
-margin_left = 3.25354
-margin_top = 2.74893
-margin_right = 1090.25
-margin_bottom = 1926.75
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Eventcard" type="TextureButton" parent="Control"]
-margin_left = 302.332
-margin_top = 569.2
-margin_right = 806.332
-margin_bottom = 1208.2
-texture_normal = ExtResource( 1 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Control/Eventcard"]
-margin_left = 31.8184
-margin_top = 46.0
-margin_right = 468.818
-margin_bottom = 585.0
-custom_fonts/font = SubResource( 1 )
-text = "Menschen fangen an in Deutschland Klopapier zu hamstern. Was tun?"
-autowrap = true
+margin_left = 0.317261
+margin_top = -0.187349
+margin_right = 1087.31
+margin_bottom = 1923.81
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -57,7 +30,7 @@ margin_left = 44.0449
 margin_top = 49.9175
 margin_right = 215.045
 margin_bottom = 100.918
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "Geld: 0$"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -68,7 +41,7 @@ margin_left = 46.0955
 margin_top = 184.054
 margin_right = 241.096
 margin_bottom = 235.054
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "Ansehen:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -79,7 +52,7 @@ margin_left = 698.793
 margin_top = 354.0
 margin_right = 967.793
 margin_bottom = 402.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 text = "Offiziell Infizierten"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -94,3 +67,5 @@ value = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Karten" parent="." instance=ExtResource( 1 )]

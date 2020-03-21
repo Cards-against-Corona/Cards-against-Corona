@@ -32,7 +32,6 @@ func _on_1_pressed():
 	currentgeld = +5
 	currentansehen = -15
 	$"Infoübersicht/Label".set_text("Stehle den Bürgern ihr geliebtes Klopapier zur Instandhaltung der Wirtschaft")
-	
 
 func _on_2_pressed():
 	$"Infoübersicht".show()
@@ -41,10 +40,19 @@ func _on_2_pressed():
 	currentansehen = +10
 	$"Infoübersicht/Label".set_text("Richte Geld für Selbstständige ein")
 
-
 func _on_3_pressed():
 	$"Infoübersicht".show()
 	currentcard = 1
 	currentgeld = 0
 	currentansehen = -5
 	$"Infoübersicht/Label".set_text("Richte ein Ausgangsverbot ein")
+
+
+func _on_Aktivieren_pressed():
+	get_parent().res_Geld += currentgeld
+	get_parent().wirk_Zufriedenheit += currentansehen
+	$"Infoübersicht".hide()
+	$"Infoübersicht/Label".set_text("Dies sind die Vor- und Nachteile dieser Karte: Geld -100 Ansehen -15")
+	currentansehen = 0
+	currentgeld = 0
+	currentcard = 0
