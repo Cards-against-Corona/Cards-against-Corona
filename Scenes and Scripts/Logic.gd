@@ -31,15 +31,15 @@ const infectedStartValue = 7
 const criticalCareBedStartValue = 28000
 const baseFatalityRate = 0.048
 const recoveryTime = 14
-const criticalCases = 0.75
+const criticalCasesFactor = 0.75
 
 func _init():
 	#init day zero
-	infectedByDay[0] = infectedStartValue
-	dead[0] = 0
-	deadByDay[0] = 0
-	cured[0] = 0
-	curedByDay[0] = 0
+	infectedByDay.push_back(infectedStartValue)
+	dead.push_back(0)
+	deadByDay.push_back(0)
+	cured.push_back(0)
+	curedByDay.push_back(0)
 	infectable = infectableStartValue
 	criticalCareBeds = criticalCareBedStartValue
 
@@ -50,38 +50,38 @@ func _ready():
 func FinishDay():
 	var newInf = _CalculateNewInfections()
 	newInfected.push_back(newInf)
-	infectedByDay.push_back(infectedByDay[-1] + newInfected)
+	infectedByDay.push_back(infectedByDay[-1] + newInfected[-1])
 	_CalculateDeadAndCured()
 	day += 1
 
 func _CalculateDeadAndCured():
-	var dead = _CalculateDead()
-	var cured = _CalculateCured()
-	dead.push_back(dead)
-	cured.push_back(cured)
-	deadByDay.push_back(deadByDay[-1] + dead)
-	curedByDay.push_back(curedByDay[-1] + cured)
-	infectable -= dead + cured
+	var _dead = _CalculateDead()
+	var _cured = _CalculateCured()
+	dead.push_back(_dead)
+	cured.push_back(_cured)
+	deadByDay.push_back(deadByDay[-1] + _dead)
+	curedByDay.push_back(curedByDay[-1] + _cured)
+	infectable -= _dead + _cured
 
 func _CalculateDead():
 	if newInfected.size() < recoveryTime:
 		return 0
 	else:
-		return newInfected[newInfected.size() - recoveryTime] * _CalculateFatalityRate()
+		return newInfected[newInfected.size() - recoveryTime + 1] * _CalculateFatalityRate()
 
 func _CalculateCured():
 	if newInfected.size() < recoveryTime:
 		return 0
 	else:
-		return newInfected[newInfected.size() - recoveryTime] * (1 - _CalculateFatalityRate())
+		return newInfected[newInfected.size() - recoveryTime + 1] * (1 - _CalculateFatalityRate())
 
 func _CalculateFatalityRate():
-	var criticalCases = newInfected[newInfected.size() - recoveryTime] * criticalCases
+	var criticalCases = newInfected[newInfected.size() - recoveryTime + 1] * criticalCasesFactor
 	if criticalCareBeds - criticalCases > 0:
 		return baseFatalityRate
 	else:
 		var criticalCaseWithoutBed = criticalCareBeds - criticalCases
-		var fatalityFactor = 100 / newInfected[newInfected.size() - recoveryTime] * criticalCaseWithoutBed / 100
+		var fatalityFactor = 100 / newInfected[newInfected.size() - recoveryTime + 1] * criticalCaseWithoutBed / 100
 		return baseFatalityRate + fatalityFactor
 
 func _CalculateNewInfections():

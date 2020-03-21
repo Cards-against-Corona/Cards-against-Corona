@@ -7,6 +7,7 @@ extends Control
 var currentcard = 0
 var currentgeld = 0
 var currentansehen = 0
+var Karte = preload("res://Scenes and Scripts/EineKarte.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -56,3 +57,7 @@ func _on_Aktivieren_pressed():
 	currentansehen = 0
 	currentgeld = 0
 	currentcard = 0
+
+#func generate():
+#	for i in len(Array):
+#		var Instance = Karte.instance()
