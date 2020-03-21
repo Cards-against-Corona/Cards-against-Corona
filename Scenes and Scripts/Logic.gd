@@ -2,6 +2,10 @@ extends Node
 
 class_name Logic 
 
+# Consequences
+enum Ressources {CRITICAL_CARE_BEDS, SECURITY_RESSOURCES, CASH}
+enum Consequences {HEALTH_SYSTEM, SATISFACTION, ECONOMY}
+
 #stored as daily new deads
 var dead = []
 #stored as max deads by day
@@ -59,9 +63,7 @@ func FinishDay():
 
 func _CalculateDeadAndCured():
 	var _dead = _CalculateDead()
-	print("Dead: " + str(_dead))
 	var _cured = _CalculateCured()
-	print("Cured: " + str(_cured))
 	dead.push_back(_dead)
 	cured.push_back(_cured)
 	deadByDay.push_back(deadByDay[-1] + _dead)
@@ -78,19 +80,15 @@ func _CalculateCured():
 	if newInfected.size() <= recoveryTime:
 		return 0
 	else:
-		print("CureRate: " + str(1.0 - _CalculateFatalityRate()))
 		return newInfected[newInfected.size() - recoveryTime - 1] * (1.0 - _CalculateFatalityRate())
 
 func _CalculateFatalityRate():
 	var criticalCases = newInfected[newInfected.size() - recoveryTime - 1] * criticalCasesFactor
-	print("Crit: " + str(criticalCases))
 	if criticalCareBeds - criticalCases > 0:
 		return baseFatalityRate
 	else:
 		var criticalCaseWithoutBed = (criticalCareBeds - criticalCases) * -1
-		print("withoutBed: " + str(criticalCaseWithoutBed))
 		var fatalityFactor = ((100 / infectedByDay[newInfected.size() - recoveryTime - 1]) * criticalCaseWithoutBed) / 100
-		print("CritFactor: " + str(fatalityFactor))
 		return baseFatalityRate + fatalityFactor
 
 func _CalculateNewInfections():
@@ -98,12 +96,4 @@ func _CalculateNewInfections():
 	if _populationFactor > 1:
 		_populationFactor = 1
 	var _result = factorK * infectedByDay[-1] * (1 - _populationFactor)
-	print("Infected: " + str(_result) + " InfPerDay: " + str(infectedByDay[-1]) + " Infable: " + str(infectable) + " Diff: " + str(infectedByDay[-1] / infectable))
 	return _result
-
-func arr_join(arr, separator = ""):
-	var output = "";
-	for s in arr:
-		output += str(s) + separator
-	output = output.left( output.length() - separator.length() )
-	return output
