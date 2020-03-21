@@ -75,7 +75,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Control"]
+[node name="Button_TagEnde" type="Button" parent="Control"]
 margin_left = 1583.68
 margin_top = 978.038
 margin_right = 1852.68
@@ -112,7 +112,7 @@ margin_bottom = -1.0
 
 [node name="Line2D_infizierte" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
 position = Vector2( 282.135, 417.159 )
-points = PoolVector2Array( -196.475, 68.3441, 316.836, -44.0809, 611.084, -168.072, 740.627, -388.296 )
+points = PoolVector2Array( -200, 80, 316.836, -44.0809, 611.084, -168.072, 750, -400 )
 default_color = Color( 1, 0.337255, 0.286275, 1 )
 
 [node name="Legende_infizierte" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
@@ -126,7 +126,7 @@ points = PoolVector2Array( -196.475, 68.3441, 259.684, 45.264, 569.086, 5.59723,
 default_color = Color( 0, 0, 0, 1 )
 
 [node name="Legende_Tote2" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
-position = Vector2( 775.013, 512.659 )
+position = Vector2( 865.693, 510.808 )
 points = PoolVector2Array( -195.9, 83.0417, -195.9, 34.2882 )
 default_color = Color( 0, 0, 0, 1 )
 
@@ -136,54 +136,58 @@ points = PoolVector2Array( -196.475, 68.3441, 316.836, -44.0809, 608.295, -94.36
 default_color = Color( 0.376471, 1, 0.286275, 1 )
 
 [node name="Legende_Genesene2" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
-position = Vector2( 954.219, 509.543 )
+position = Vector2( 1155.94, 509.543 )
 points = PoolVector2Array( -196.475, 88.3733, -196.712, 38.5117 )
 default_color = Color( 0.376471, 1, 0.286275, 1 )
 
-[node name="Ansehen" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
+[node name="Label_Bevoelkerung" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
 margin_left = 23.0
 margin_top = 541.0
 margin_right = 279.0
 margin_bottom = 581.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Gesamtbevölkerung:"
+text = "Gesamtbevölkerung:
+80.000.000"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Ansehen2" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
+[node name="Label_Infizierte" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
 margin_left = 351.0
 margin_top = 542.0
 margin_right = 462.0
 margin_bottom = 582.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Infizierte"
+text = "Infizierte:
+80.000.000"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Ansehen3" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
-margin_left = 600.0
+[node name="Label_Tote" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
+margin_left = 688.83
 margin_top = 542.0
-margin_right = 671.0
-margin_bottom = 582.0
+margin_right = 824.83
+margin_bottom = 605.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Tote"
+text = "Tote:
+80.000.000"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Ansehen4" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
-margin_left = 773.0
-margin_top = 542.0
-margin_right = 897.0
-margin_bottom = 582.0
+[node name="Label_Genesene" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
+margin_left = 982.12
+margin_top = 543.851
+margin_right = 1118.12
+margin_bottom = 606.851
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Genesene"
+text = "Genesene:
+80.000.000"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -422,3 +426,4 @@ __meta__ = {
 }
 
 [node name="Karten" parent="." instance=ExtResource( 1 )]
+[connection signal="pressed" from="Control/Button_TagEnde" to="." method="_on_Button_TagEnde_pressed"]

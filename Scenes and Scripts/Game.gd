@@ -42,3 +42,35 @@ func _process(delta):
 
 func _on_Geld_draw():
 	pass # Replace with function body.
+
+
+func _on_Button_TagEnde_pressed():
+	# trigger events?
+	
+	# calculate infection counts --> mit Mechanikern koordinieren
+	var arr = [1, 2, 3] # TESTARRAY
+	
+	# calculate other values
+	
+	# update main window
+	# update infection counters
+	$"Control/TabContainer/COVID-19 Zahlen/Label_Infizierte".text = "Infizierte:\n" + str(arr.find_last())
+	$"Control/TabContainer/COVID-19 Zahlen/Label_Tote".text = "Tote:\n" + str(15)
+	$"Control/TabContainer/COVID-19 Zahlen/Label_Genesene".text = "Genesene:\n" + str(15)
+	
+	# update other KPIs
+	
+	# calculate the Graphs
+	# for Covid-Screen: -200;80 -> 750;400
+	
+	# arr wird durch werte z.B. Anzahl infizierte ersetzt
+	var y_max = arr.max()
+	var y_min = arr.min()
+		
+	
+	for y in range(arr.size()):
+		print(y)
+	
+	# enter new entries to the newsfeed
+	
+	# enter new entries to the eventlog
