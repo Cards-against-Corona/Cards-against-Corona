@@ -18,6 +18,8 @@ var infectedByDay = []
 var day = 0
 # whole population without dead and cured people
 var infectable = 0
+# count of critical care beds
+var criticalCareBeds = 0
 
 ####### INTERNAL ######
 # internal factor
@@ -26,13 +28,20 @@ var factorK = 0.25
 #Const
 const infectableStartValue = 80000000
 const infectedStartValue = 7
+const criticalCareBedStartValze = 28000
 const baseFatalityRate = 0.048
 const recoveryTime = 14
 const criticalCases = 0,75
 
 func _init():
-	infected = infectedStartValue
+	#init day zero
+	infectedByDay[0] = infectedStartValue
+	dead[0] = 0
+	deadByDay[0] = 0
+	cured[0] = 0
+	curedByDay[0] = 0
 	infectable = initInfectableCount
+	criticalCareBeds = criticalCareBedStartValue
 
 func _ready():
 	pass # Replace with function body.
@@ -58,16 +67,22 @@ func _CalculateDead():
 	if newInfected.size() < recoveryTime:
 		return 0
 	else
-		return newInfected[newInfected.size() - recoveryTime] * _CalculateFatalityRare()
+		return newInfected[newInfected.size() - recoveryTime] * _CalculateFatalityRate()
 
 func _CalculateCured():
 	if newInfected.size() < recoveryTime:
 		return 0
 	else
-		return newInfected[newInfected.size() - recoveryTime] * (1 - _CalculateFatalityRare())
+		return newInfected[newInfected.size() - recoveryTime] * (1 - _CalculateFatalityRate())
 
-func _CalculateFatalityRare():
-	return baseFatalityRate
+func _CalculateFatalityRate():
+	var criticalCases = newInfected[newInfected.size() - recoveryTime] * criticalCases
+	if criticalCareBeds - criticalCases > 0
+		return baseFatalityRate
+	else
+		var criticalCaseWithoutBed = criticalCareBeds - criticalCases
+		var fatalityFactor = 100 / newInfected[newInfected.size() - recoveryTime] * criticalCaseWithoutBed / 100
+		return baseFatalityRate + fatalityFactor
 
 func _CalculateNewInfections():
 	return factorK * infectedByDay[-1] * (1 - (infectedByDay[-1] / infectable))
