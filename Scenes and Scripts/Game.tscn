@@ -9,11 +9,11 @@
 size = 40
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 40
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 25
 font_data = ExtResource( 7 )
 
@@ -53,44 +53,121 @@ __meta__ = {
 }
 
 [node name="Geld" type="Label" parent="Control"]
-margin_left = 44.0449
-margin_top = 49.9175
-margin_right = 215.045
-margin_bottom = 100.918
-custom_fonts/font = SubResource( 3 )
+margin_left = 71.7378
+margin_top = 65.0227
+margin_right = 242.738
+margin_bottom = 116.023
+rect_pivot_offset = Vector2( 72.5416, 25.5003 )
+custom_fonts/font = SubResource( 2 )
 text = "Geld: 0$"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Geld2" type="Label" parent="Control"]
+margin_left = 66.7028
+margin_top = 127.961
+margin_right = 353.703
+margin_bottom = 178.962
+rect_pivot_offset = Vector2( 72.5416, 25.5003 )
+custom_fonts/font = SubResource( 2 )
+text = "Grundversorgung"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Geld3" type="Label" parent="Control"]
+margin_left = 64.1852
+margin_top = 175.794
+margin_right = 351.185
+margin_bottom = 226.795
+rect_pivot_offset = Vector2( 72.5416, 25.5003 )
+custom_fonts/font = SubResource( 2 )
+text = "Krankenhausbetten"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Geld4" type="Label" parent="Control"]
+margin_left = 62.0
+margin_top = 234.0
+margin_right = 365.0
+margin_bottom = 274.0
+rect_pivot_offset = Vector2( 72.5416, 25.5003 )
+custom_fonts/font = SubResource( 2 )
+text = "Sicherheitskräfte"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Ansehen" type="Label" parent="Control"]
-margin_left = 46.0955
-margin_top = 184.054
-margin_right = 241.096
-margin_bottom = 235.054
-custom_fonts/font = SubResource( 3 )
-text = "Ansehen:"
+margin_left = 542.05
+margin_top = 45.5896
+margin_right = 777.05
+margin_bottom = 96.5896
+custom_fonts/font = SubResource( 2 )
+text = "Zufriedenheit:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ansehen2" type="Label" parent="Control"]
+margin_left = 622.611
+margin_top = 176.501
+margin_right = 817.611
+margin_bottom = 227.501
+custom_fonts/font = SubResource( 2 )
+text = "Infizierte: 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ansehen4" type="Label" parent="Control"]
+margin_left = 617.576
+margin_top = 126.151
+margin_right = 812.576
+margin_bottom = 177.151
+custom_fonts/font = SubResource( 2 )
+text = "Gesunde: 79.999.999"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ansehen3" type="Label" parent="Control"]
+margin_left = 622.611
+margin_top = 219.299
+margin_right = 817.611
+margin_bottom = 270.299
+custom_fonts/font = SubResource( 2 )
+text = "Tote: 0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button" type="Button" parent="Control"]
-margin_left = 698.793
-margin_top = 354.0
-margin_right = 967.793
-margin_bottom = 402.0
-custom_fonts/font = SubResource( 4 )
-text = "Offiziell Infizierten"
+margin_left = 64.3745
+margin_top = 419.456
+margin_right = 333.374
+margin_bottom = 467.456
+custom_fonts/font = SubResource( 3 )
+text = "Tag beenden"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="Control"]
-margin_left = 215.439
-margin_top = 187.192
-margin_right = 473.439
-margin_bottom = 215.192
+margin_left = 791.954
+margin_top = 58.7976
+margin_right = 1049.95
+margin_bottom = 86.7976
 value = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Line2D" type="Line2D" parent="Control"]
+position = Vector2( 247.132, 741.694 )
+scale = Vector2( 24.1408, 9.6842 )
+points = PoolVector2Array( 29.7604, -48.1293, 23.1322, -14.56, 20.2704, -8.61493, 9.52896, -1.85589, 5.35855, -1.04365, 2.55993, -0.498581, 0, 0 )
+width = 0.5
+default_color = Color( 1, 0.337255, 0.286275, 1 )
