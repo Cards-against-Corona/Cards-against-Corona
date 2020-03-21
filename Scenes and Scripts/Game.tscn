@@ -113,7 +113,6 @@ margin_bottom = -1.0
 
 [node name="Line2D_infizierte" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
 position = Vector2( 280, 420 )
-points = PoolVector2Array( -200, 80, 316.836, -44.0809, 611.084, -168.072, 850, -400 )
 default_color = Color( 1, 0.337255, 0.286275, 1 )
 
 [node name="Legende_infizierte" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
@@ -123,7 +122,6 @@ default_color = Color( 1, 0.337255, 0.286275, 1 )
 
 [node name="Line2D_Tote" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
 position = Vector2( 280, 420 )
-points = PoolVector2Array( -196.475, 68.3441, 259.684, 45.264, 569.086, 5.59723, 727.753, -46.7631 )
 default_color = Color( 0, 0, 0, 1 )
 
 [node name="Legende_Tote2" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
@@ -133,7 +131,6 @@ default_color = Color( 0, 0, 0, 1 )
 
 [node name="Line2D_Genesene" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
 position = Vector2( 280, 420 )
-points = PoolVector2Array( -196.475, 68.3441, 316.836, -44.0809, 608.295, -94.3685, 733.642, -95.9551 )
 default_color = Color( 0.376471, 1, 0.286275, 1 )
 
 [node name="Legende_Genesene2" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]

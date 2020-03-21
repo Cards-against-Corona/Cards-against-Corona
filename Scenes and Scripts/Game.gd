@@ -37,24 +37,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-
-
-
-
-func _on_Geld_draw():
-	pass # Replace with function body.
-
-
-func _on_Button_TagEnde_pressed():
-	# trigger events?
-	
-	# calculate new numbers
-	logic.FinishDay()
-	
-	# calculate other values
-	
-	# update main window
+		# update main window
 	# update infection counters
 	$"Control/TabContainer/COVID-19 Zahlen/Label_Infizierte".text = "Infizierte:\n" + str(int(round(logic.infectedByDay[-1])))
 	$"Control/TabContainer/COVID-19 Zahlen/Label_Tote".text = "Tote:\n" + str(int(round(logic.deadByDay[-1])))
@@ -81,6 +64,23 @@ func _on_Button_TagEnde_pressed():
 	$"Control/TabContainer/COVID-19 Zahlen/Line2D_Genesene".clear_points()
 	for point in temp_points:
 		$"Control/TabContainer/COVID-19 Zahlen/Line2D_Genesene".add_point(point)
+
+
+
+
+func _on_Geld_draw():
+	pass # Replace with function body.
+
+
+func _on_Button_TagEnde_pressed():
+	# trigger events?
+	
+	# calculate new numbers
+	logic.FinishDay()
+	
+	# calculate other values
+	
+
 	
 	# enter new entries to the newsfeed
 	
