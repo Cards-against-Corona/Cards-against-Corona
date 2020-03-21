@@ -11,8 +11,7 @@ var Karte = preload("res://Scenes and Scripts/EineKarte.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	generate()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -58,6 +57,21 @@ func _on_Aktivieren_pressed():
 	currentgeld = 0
 	currentcard = 0
 
-#func generate():
-#	for i in len(Array):
-#		var Instance = Karte.instance()
+func generate():
+	var file = File.new()
+	file.open("res://Scenes and Scripts/events.json", file.READ)
+	var jsonText = file.get_as_text()
+	file.close()
+	var resultJson = JSON.parse(jsonText)
+	var result = {}
+	
+	if resultJson.error == OK:  # If parse OK
+		var data = resultJson.result
+		print(data[0]["name"])
+	else:  # If parse has errors
+		print("Error: ", resultJson.error)
+		print("Error Line: ", resultJson.error_line)
+		print("Error String: ", resultJson.error_string)
+	
+	#or i in len(Array):
+	#	var Instance = Karte.instance()
