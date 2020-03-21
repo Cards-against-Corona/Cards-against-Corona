@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cards_corona_bg_music_loop.wav-9c31936645f8013c21b10521a9a43abb.sample"
+
+[deps]
+
+source_file="res://cards_corona_bg_music_loop.wav"
+dest_files=[ "res://.import/cards_corona_bg_music_loop.wav-9c31936645f8013c21b10521a9a43abb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
