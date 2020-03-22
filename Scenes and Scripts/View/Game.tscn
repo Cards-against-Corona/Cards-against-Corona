@@ -1,7 +1,7 @@
 [gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Scenes and Scripts/View/Karten.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/Background_Viren.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/Background.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Green.png" type="Texture" id=3]
 [ext_resource path="res://cards_corona_bg_music_loop.wav" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Aktuelles/Frame_Button_Aktuelles.png" type="Texture" id=5]
@@ -26,21 +26,21 @@
 [ext_resource path="res://Assets/Ressourcen/Icon_Zufriedenheit.png" type="Texture" id=22]
 [ext_resource path="res://Assets/RechtsUnten/Deutschlandkarte.png" type="Texture" id=23]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 size = 25
 font_data = ExtResource( 7 )
 
-[sub_resource type="Theme" id=4]
+[sub_resource type="Theme" id=2]
 
-[sub_resource type="StyleBoxTexture" id=5]
+[sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 332, 48 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=4]
 size = 34
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxTexture" id=7]
+[sub_resource type="StyleBoxTexture" id=5]
 texture = ExtResource( 12 )
 region_rect = Rect2( 0, 0, 444, 93 )
 margin_left = 20.0
@@ -48,11 +48,11 @@ margin_right = 20.0
 margin_top = 10.0
 margin_bottom = 10.0
 
-[sub_resource type="StyleBoxTexture" id=8]
+[sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 15 )
 region_rect = Rect2( 0, 0, 444, 85 )
 
-[sub_resource type="StyleBoxTexture" id=9]
+[sub_resource type="StyleBoxTexture" id=7]
 texture = ExtResource( 15 )
 region_rect = Rect2( 0, 0, 444, 85 )
 margin_left = 20.0
@@ -60,31 +60,31 @@ margin_right = 20.0
 margin_top = 10.0
 margin_bottom = 10.0
 
-[sub_resource type="StyleBoxTexture" id=10]
+[sub_resource type="StyleBoxTexture" id=8]
 texture = ExtResource( 14 )
 region_rect = Rect2( 0, 0, 1307, 610 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 25
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 26
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=11]
 size = 25
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=12]
-size = 26
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=13]
-size = 25
-font_data = ExtResource( 7 )
-
-[sub_resource type="StyleBoxTexture" id=14]
+[sub_resource type="StyleBoxTexture" id=12]
 texture = ExtResource( 11 )
 region_rect = Rect2( 0, 0, 332, 48 )
 
-[sub_resource type="DynamicFont" id=15]
+[sub_resource type="DynamicFont" id=13]
 size = 20
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=16]
+[sub_resource type="DynamicFont" id=14]
 size = 80
 font_data = ExtResource( 6 )
 
@@ -126,7 +126,7 @@ custom_styles/hover = ExtResource( 9 )
 custom_styles/pressed = ExtResource( 9 )
 custom_styles/focus = ExtResource( 9 )
 custom_styles/normal = ExtResource( 9 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "NÄCHSTER TAG"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -141,7 +141,7 @@ custom_styles/hover = ExtResource( 16 )
 custom_styles/pressed = ExtResource( 16 )
 custom_styles/focus = ExtResource( 16 )
 custom_styles/normal = ExtResource( 16 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "LÄNDERAUSWAHL"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -164,7 +164,7 @@ margin_left = 32.0
 margin_top = 40.0
 margin_right = 352.0
 margin_bottom = 616.0
-theme = SubResource( 4 )
+theme = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -172,8 +172,8 @@ __meta__ = {
 [node name="Label_Aktuelles" type="Label" parent="Control/TextureRect/VBoxContainer_Aktuelles"]
 margin_right = 320.0
 margin_bottom = 35.0
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Aktuelles"
 align = 1
@@ -232,11 +232,11 @@ margin_left = 501.832
 margin_top = 58.038
 margin_right = 1853.83
 margin_bottom = 714.038
-custom_styles/tab_fg = SubResource( 7 )
-custom_styles/tab_disabled = SubResource( 8 )
-custom_styles/tab_bg = SubResource( 9 )
-custom_styles/panel = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/tab_fg = SubResource( 5 )
+custom_styles/tab_disabled = SubResource( 6 )
+custom_styles/tab_bg = SubResource( 7 )
+custom_styles/panel = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
 tab_align = 0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -281,7 +281,7 @@ margin_left = 30.9333
 margin_top = 527.962
 margin_right = 286.933
 margin_bottom = 584.962
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Gesamtbevölkerung:
 80.000.000"
@@ -294,7 +294,7 @@ margin_left = 310.933
 margin_top = 527.962
 margin_right = 428.933
 margin_bottom = 584.962
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Infizierte:
 80.000.000"
@@ -307,7 +307,7 @@ margin_left = 542.933
 margin_top = 527.962
 margin_right = 678.933
 margin_bottom = 590.962
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Tote:
 80.000.000"
@@ -320,7 +320,7 @@ margin_left = 726.933
 margin_top = 527.962
 margin_right = 862.933
 margin_bottom = 590.962
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Genesene:
 80.000.000"
@@ -337,7 +337,7 @@ margin_left = 46.9333
 margin_top = 91.962
 margin_right = 162.933
 margin_bottom = 117.962
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "80.000.000"
 __meta__ = {
@@ -349,7 +349,7 @@ margin_left = 46.9333
 margin_top = 171.962
 margin_right = 162.933
 margin_bottom = 197.962
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "80.000.000"
 __meta__ = {
@@ -361,7 +361,7 @@ margin_left = 46.9333
 margin_top = 251.962
 margin_right = 162.933
 margin_bottom = 277.962
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "80.000.000"
 __meta__ = {
@@ -373,7 +373,7 @@ margin_left = 46.9333
 margin_top = 339.962
 margin_right = 162.933
 margin_bottom = 365.962
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "80.000.000"
 __meta__ = {
@@ -385,7 +385,7 @@ margin_left = 46.9333
 margin_top = 419.962
 margin_right = 162.933
 margin_bottom = 445.962
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "80.000.000"
 __meta__ = {
@@ -397,7 +397,7 @@ margin_left = 1046.93
 margin_top = 523.962
 margin_right = 1162.93
 margin_bottom = 549.962
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Tag 1"
 __meta__ = {
@@ -419,7 +419,7 @@ __meta__ = {
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 26.0
+margin_top = 46.0
 
 [node name="Line2D" type="Line2D" parent="Control/TabContainer/Wirtschaft"]
 position = Vector2( 67.4633, 505.989 )
@@ -430,7 +430,7 @@ default_color = Color( 1, 0.337255, 0.286275, 1 )
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 26.0
+margin_top = 46.0
 
 [node name="Line2D2" type="Line2D" parent="Control/TabContainer/Politik"]
 position = Vector2( 141.488, 561.507 )
@@ -461,8 +461,8 @@ __meta__ = {
 [node name="Label_Resourcen" type="Label" parent="Control/TextureRect2/VBoxContainer_Resourcen"]
 margin_right = 320.0
 margin_bottom = 35.0
-custom_styles/normal = SubResource( 14 )
-custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Ressourcen"
 align = 1
@@ -498,7 +498,7 @@ margin_right = 238.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Wirtschaft"
 valign = 1
@@ -510,7 +510,7 @@ margin_right = 320.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "100%"
 align = 2
@@ -538,7 +538,7 @@ margin_right = 238.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Sicherheitskräfte"
 valign = 1
@@ -550,7 +550,7 @@ margin_right = 320.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "100%"
 align = 2
@@ -578,7 +578,7 @@ margin_right = 239.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Gesundheitswesen"
 valign = 1
@@ -590,7 +590,7 @@ margin_right = 320.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "100%"
 align = 2
@@ -618,7 +618,7 @@ margin_right = 238.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Intensivbetten"
 valign = 1
@@ -630,7 +630,7 @@ margin_right = 320.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "100%"
 align = 2
@@ -658,7 +658,7 @@ margin_right = 238.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Zufriedenheit"
 valign = 1
@@ -670,7 +670,7 @@ margin_right = 320.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "100%"
 align = 2
@@ -681,7 +681,7 @@ margin_left = 1240.0
 margin_top = 776.0
 margin_right = 1499.0
 margin_bottom = 856.002
-custom_fonts/font = SubResource( 16 )
+custom_fonts/font = SubResource( 14 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Tag 999"
 valign = 1
