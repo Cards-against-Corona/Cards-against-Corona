@@ -40,7 +40,7 @@ static func generateActions(path: String):
 		Instance.geld = 0 # deprecated
 		Instance.betten = 0
 		Instance.security = 0
-		if card.has('cost'):
+		if card.has('costs'):
 			for cost in card["costs"]:
 				if cost["target"] == "CRITICAL_CARE_BEDS":
 					Instance.betten = cost["value"]
