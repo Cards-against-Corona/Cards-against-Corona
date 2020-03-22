@@ -22,8 +22,6 @@ var infectedByDay = []
 var day = 0
 # whole population without dead and cured people
 var infectable = 0
-# count of critical care beds
-var criticalCareBeds = 0
 
 #Ressources and Costs
 var economy = 0
@@ -32,10 +30,11 @@ var security = 0
 var securityByDay = []
 var healthsystem = 0
 var healthsystemByDay = []
-var criticalCare = 0
-var criticalCareByDay = []
 var satisfaction = 0
 var satisfactionByDay = []
+# count of critical care beds
+var criticalCareBeds = 0
+var criticalCareBedsByDay = []
 
 ####### INTERNAL ######
 # internal factor
@@ -66,13 +65,6 @@ func _init():
 func _ready():
 	pass # Replace with function body.
 
-func registerCard(card):
-	#instant costs
-	pass
-
-func registerEvent(event):
-	pass
-
 # This function calculates the new infections, deads and cures per day
 func FinishDay():
 	var newInf = _CalculateNewInfections()
@@ -80,7 +72,46 @@ func FinishDay():
 	infectedByDayInternal.push_back(infectedByDay[-1] + newInfected[-1])
 	_CalculateDeadAndCured()
 	infectedByDay.push_back(infectedByDayInternal[-1] - dead[-1] - cured[-1])
+	addResourceStatistics()
 	day += 1
+
+func registerCard(card):
+	#instant costs
+	handleCostsOrConsequences(card)
+
+func registerEvent(event):
+	pass
+	
+func handleCostsOrConsequences(obj):
+	if obj.Bettenkosten != 0:
+		var changeValue = 100 / criticalCareBeds * obj.Bettenkosten
+		criticalCareBeds += changeValue
+	
+	if obj.Securitykosten != 0:
+		var changeValue = 100 / security * obj.Securitykosten
+		security += changeValue
+	
+	if obj.UrsacheWirtschaft != 0:
+		var changeValue = 100 / economy * obj.UrsacheWirtschaft
+		economy += changeValue
+	
+	if obj.UrsacheBefriedigung != 0:
+		var changeValue = 100 / satisfaction * obj.UrsacheBefriedigung
+		satisfaction += changeValue
+	
+	if obj.UrsacheHealth != 0:
+		var changeValue = 100 / healthsystem * obj.UrsacheHealth
+		healthsystem += changeValue
+	
+
+func addResourceStatistics():
+		criticalCareBedsByDay.push_back(criticalCareBeds)
+		securityByDay.push_back(security)
+		economyByDay.push_back(economy)
+		satisfactionByDay.push_back(satisfaction)
+		healthsystemByDay.push_back(healthsystem)
+
+############## Calculation infected ##############
 
 func _CalculateDeadAndCured():
 	var _dead = _CalculateDead()
