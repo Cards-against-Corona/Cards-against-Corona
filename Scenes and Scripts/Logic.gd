@@ -28,6 +28,7 @@ var criticalCareBeds = 0
 ####### INTERNAL ######
 # internal factor
 var factorK = 0.25
+var infectedByDayInternal = []
 
 #Const
 const infectableStartValue = 80000000
@@ -56,10 +57,10 @@ func FinishDay():
 	print(day)
 	var newInf = _CalculateNewInfections()
 	newInfected.push_back(newInf)
-	infectedByDay.push_back(infectedByDay[-1] + newInfected[-1])
+	infectedByDayInternal.push_back(infectedByDay[-1] + newInfected[-1])
 	_CalculateDeadAndCured()
+	infectedByDay.push_back(infectedByDayInternal[-1] - dead[-1] - cured[-1])
 	day += 1
-	print("------------")
 
 func _CalculateDeadAndCured():
 	var _dead = _CalculateDead()
