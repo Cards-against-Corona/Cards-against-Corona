@@ -40,16 +40,13 @@ func _ready():
 func _process(delta):
 
 	# update main window
-	$"Control/Label_Tag".text = "Tag " + str(logic.day)
 	# update infection counters
 	$"Control/TabContainer/COVID-19 Zahlen/Label_Infizierte".text = "Infizierte:\n" + str(int(round(logic.infectedByDay[-1])))
 	$"Control/TabContainer/COVID-19 Zahlen/Label_Tote".text = "Tote:\n" + str(int(round(logic.deadByDay[-1])))
 	$"Control/TabContainer/COVID-19 Zahlen/Label_Genesene".text = "Genesene:\n" + str(int(round(logic.curedByDay[-1])))
 	
 	$"Control/TabContainer/COVID-19 Zahlen/Label_Scale_Tag".text = "Tag " + str(logic.day)
-	
 
-	
 	# calculate the Graphs
 	
 	var temp_points = []
@@ -69,8 +66,12 @@ func _process(delta):
 	for point in temp_points:
 		$"Control/TabContainer/COVID-19 Zahlen/Line2D_Genesene".add_point(point)
 
-
-
+	# Update Resource counters
+	$Control/TextureRect2/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen/HBoxContainer_res_Wirtschaft/Label_res_Wirtschaft_value.text = str(logic.economy) + "%"
+	$Control/TextureRect2/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen/HBoxContainer_res_Sicherheit/Label_res_Sicherheit_value.text = str(logic.security) + "%"
+	$Control/TextureRect2/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen/HBoxContainer_res_Gesundheit/Label_res_Gesundheit_value.text = str(logic.healthsystem) + "%"
+	$Control/TextureRect2/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen/HBoxContainer_res_Betten/Label_res_Betten_value.text = str(logic.criticalCareBeds)
+	$Control/TextureRect2/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen/HBoxContainer_res_Zufrieden/Label_res_Zufrieden_value.text = str(logic.satisfaction) + "%"
 
 func _on_Geld_draw():
 	pass # Replace with function body.
