@@ -75,7 +75,6 @@ func registerEvent(name):
 
 # This function calculates the new infections, deads and cures per day
 func FinishDay():
-	print(day)
 	var newInf = _CalculateNewInfections()
 	newInfected.push_back(newInf)
 	infectedByDayInternal.push_back(infectedByDay[-1] + newInfected[-1])
