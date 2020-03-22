@@ -67,7 +67,6 @@ func _ready():
 	pass # Replace with function body.
 
 func registerCard(card):
-	#instant costs
 	pass
 
 func registerEvent(event):
