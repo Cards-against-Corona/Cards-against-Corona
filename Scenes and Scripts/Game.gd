@@ -32,35 +32,38 @@ var logic = load("res://Scenes and Scripts/Logic.gd").new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	logic.FinishDay()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-		# update main window
+
+	# update main window
+	$"Control/Label_Tag".text = "Tag " + str(logic.day)
 	# update infection counters
 	$"Control/TabContainer/COVID-19 Zahlen/Label_Infizierte".text = "Infizierte:\n" + str(int(round(logic.infectedByDay[-1])))
 	$"Control/TabContainer/COVID-19 Zahlen/Label_Tote".text = "Tote:\n" + str(int(round(logic.deadByDay[-1])))
 	$"Control/TabContainer/COVID-19 Zahlen/Label_Genesene".text = "Genesene:\n" + str(int(round(logic.curedByDay[-1])))
 	
-	# update other KPIs
+	$"Control/TabContainer/COVID-19 Zahlen/Coordinate_System/Label_Scale_infected".text = str(int(round(logic.infectedByDay.max())))
+	$"Control/TabContainer/COVID-19 Zahlen/Coordinate_System/Label_Scale_dead".text = str(int(round(logic.deadByDay.max())))
+	$"Control/TabContainer/COVID-19 Zahlen/Coordinate_System/Label_scale_cured".text = str(int(round(logic.curedByDay.max())))
 	
 	# calculate the Graphs
 	
-	
 	var temp_points = []
 	# for Covid-Screen: -200;80 -> 850;-400
-	temp_points = _normalize_Graph_Points(-200, 850, 80, -400, logic.infectedByDay)
+	temp_points = _normalize_Graph_Points(-100, 800, 80, -350, logic.infectedByDay)
 	$"Control/TabContainer/COVID-19 Zahlen/Line2D_infizierte".clear_points()
 	for point in temp_points:
 		$"Control/TabContainer/COVID-19 Zahlen/Line2D_infizierte".add_point(point)
 	
-	temp_points = _normalize_Graph_Points(-200, 850, 80, -400, logic.deadByDay)
-	$"Control/TabContainer/COVID-19 Zahlen/Line2D_Tote".clear_points()
+	temp_points = _normalize_Graph_Points(-100, 800, 80, -350, logic.deadByDay)
+	$"Control/TabContainer/COVID-19 Zahlen/Line2D_dead".clear_points()
 	for point in temp_points:
-		$"Control/TabContainer/COVID-19 Zahlen/Line2D_Tote".add_point(point)
+		$"Control/TabContainer/COVID-19 Zahlen/Line2D_dead".add_point(point)
 	
-	temp_points = _normalize_Graph_Points(-200, 850, 80, -400, logic.curedByDay)
+	temp_points = _normalize_Graph_Points(-100, 800, 80, -350, logic.curedByDay)
 	$"Control/TabContainer/COVID-19 Zahlen/Line2D_Genesene".clear_points()
 	for point in temp_points:
 		$"Control/TabContainer/COVID-19 Zahlen/Line2D_Genesene".add_point(point)
@@ -78,9 +81,9 @@ func _on_Button_TagEnde_pressed():
 	# calculate new numbers
 	logic.FinishDay()
 	
-	# calculate other values
+	# update other KPIs
 	
-
+	# calculate other values
 	
 	# enter new entries to the newsfeed
 	
@@ -92,21 +95,23 @@ func _normalize_Graph_Points(frame_x_min, frame_x_max, frame_y_min, frame_y_max,
 	var y_temp_px
 	var x_step_size
 	# read border values
-	var y_max_value = input_array.max()
-	var y_min_value = input_array.min()
+	var y_max_value = int(round(input_array.max()))
+	var y_min_value = int(round(input_array.min()))
 	
 	var y_diff_px = frame_y_max - frame_y_min
 	var y_diff_value = y_max_value - y_min_value
 	
 	# calculate x step size
-	x_step_size = ( frame_x_max - frame_x_min ) / input_array.size()
+	if input_array.size() == 1: x_step_size = frame_x_max - frame_x_min
+	else:
+		x_step_size = ( frame_x_max - frame_x_min ) / ( input_array.size() - 1 )
 	
 	# normalize y values and write to return
 	for i in input_array.size():
 		x_temp_px = frame_x_min + x_step_size * i
-		if y_diff_value == 0: y_temp_px = 0
+		if y_diff_value == 0: y_temp_px = frame_y_min
 		else:
-			y_temp_px =  ( ( input_array[i] - y_min_value ) / y_diff_value ) * y_diff_px + frame_y_min
+			y_temp_px =  ( ( round(input_array[i]) - y_min_value ) / y_diff_value ) * y_diff_px + frame_y_min
 		return_array.push_back(Vector2(x_temp_px, y_temp_px))
 	
 	return return_array
