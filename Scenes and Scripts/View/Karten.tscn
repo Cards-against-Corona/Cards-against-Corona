@@ -14,7 +14,7 @@
 [ext_resource path="res://Assets/Ergebnisse/Sicherheitskräfte_status.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=1]
-size = 20
+size = 14
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -85,7 +85,6 @@ margin_right = 100.584
 margin_bottom = 63.7473
 custom_fonts/font = SubResource( 1 )
 text = "XY"
-align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false

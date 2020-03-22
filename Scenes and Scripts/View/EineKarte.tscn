@@ -13,7 +13,7 @@
 [ext_resource path="res://Assets/Ergebnisse/status_arrow_down.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
-size = 20
+size = 14
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -36,6 +36,8 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 129.464, 112.316 )
+scale = Vector2( 0.8, 0.8 )
 
 [node name="Handlung" type="Label" parent="."]
 margin_left = 62.0
@@ -44,7 +46,6 @@ margin_right = 244.0
 margin_bottom = 245.0
 custom_fonts/font = SubResource( 1 )
 text = "Handlung XY"
-align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
