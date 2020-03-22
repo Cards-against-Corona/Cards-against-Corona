@@ -10,3 +10,7 @@ Kurze Erklärung zum Spiel.
 
 Kurze Anleitung wie das Spiel zu spielen ist.
 
+# Links
+
+Formelgrundlage:
+https://docs.google.com/spreadsheets/d/1jBipsfwzy0i8gy0HLSoLyrkr_eU4_uP-y3Bk2HxtS2c/edit?usp=sharing
