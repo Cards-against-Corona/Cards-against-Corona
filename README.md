@@ -1,4 +1,4 @@
-# Cards against Corona
+<img src="logo.png" height="500" />
 
 *Cards against Corona* ist ein Spiel, das im Rahmen des [#WirvsVirus](https://wirvsvirushackathon.org) Hackathons der deutschen Bundesregierung entstanden ist.
 
