@@ -71,6 +71,7 @@ margin_bottom = 311.211
 custom_fonts/font = SubResource( 3 )
 text = "Hier und da bla bla bla"
 autowrap = true
+clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
