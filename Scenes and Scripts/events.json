@@ -1,7 +1,7 @@
 [
   {
     "name": "Hamsterkäufe",
-    "icon": "some-icon.png",
+    "icon": "res://Assets/Aktuelles/Bild_grenzschließung.png",
     "description": "Besorgte Bürger leeren die Supermarktregale",
     "effectivity": 1,
     "consequence": [

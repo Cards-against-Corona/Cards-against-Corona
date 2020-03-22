@@ -184,10 +184,10 @@ size_flags_vertical = 3
 
 [node name="VBoxContainer_Aktuelles_Scrollable" type="VBoxContainer" parent="Control/TextureRect/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles"]
 margin_right = 320.0
-margin_bottom = 425.0
 size_flags_horizontal = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/TextureRect/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles/VBoxContainer_Aktuelles_Scrollable"]
+visible = false
 margin_right = 320.0
 margin_bottom = 99.0
 
@@ -217,9 +217,9 @@ valign = 1
 autowrap = true
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Control/TextureRect/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles/VBoxContainer_Aktuelles_Scrollable"]
-margin_top = 103.0
+visible = false
 margin_right = 320.0
-margin_bottom = 202.0
+margin_bottom = 99.0
 
 [node name="TextureRect" type="TextureRect" parent="Control/TextureRect/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles/VBoxContainer_Aktuelles_Scrollable/HBoxContainer2"]
 margin_right = 105.0
@@ -246,9 +246,9 @@ valign = 1
 autowrap = true
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Control/TextureRect/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles/VBoxContainer_Aktuelles_Scrollable"]
-margin_top = 206.0
+visible = false
 margin_right = 320.0
-margin_bottom = 305.0
+margin_bottom = 99.0
 
 [node name="TextureRect" type="TextureRect" parent="Control/TextureRect/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles/VBoxContainer_Aktuelles_Scrollable/HBoxContainer3"]
 margin_right = 105.0
@@ -275,9 +275,9 @@ valign = 1
 autowrap = true
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="Control/TextureRect/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles/VBoxContainer_Aktuelles_Scrollable"]
-margin_top = 309.0
+visible = false
 margin_right = 320.0
-margin_bottom = 425.0
+margin_bottom = 116.0
 
 [node name="TextureRect" type="TextureRect" parent="Control/TextureRect/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles/VBoxContainer_Aktuelles_Scrollable/HBoxContainer4"]
 margin_right = 105.0
