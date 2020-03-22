@@ -9,27 +9,38 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Reference",
+"class": "Action",
+"language": "GDScript",
+"path": "res://Scenes and Scripts/Model/Action.gd"
+}, {
 "base": "Node",
 "class": "Logic",
 "language": "GDScript",
-"path": "res://Scenes and Scripts/Logic.gd"
+"path": "res://Scenes and Scripts/Controller/Logic.gd"
 } ]
 _global_script_class_icons={
+"Action": "",
 "Logic": ""
 }
 
 [application]
 
 config/name="Cards against Corona"
-run/main_scene="res://Scenes and Scripts/Game.tscn"
+run/main_scene="res://Scenes and Scripts/View/Game.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/size/width=1920
 window/size/height=1080
+window/handheld/orientation="portrait"
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray(  )
 
 [rendering]
 

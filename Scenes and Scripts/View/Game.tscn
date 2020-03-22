@@ -2,6 +2,8 @@
 
 [ext_resource path="res://Scenes and Scripts/Karten.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Background.png" type="Texture" id=2]
+[ext_resource path="res://Scenes and Scripts/View/Karten.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Background_Viren.jpg" type="Texture" id=2]
 [ext_resource path="res://Assets/Green.png" type="Texture" id=3]
 [ext_resource path="res://cards_corona_bg_music_loop.wav" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Aktuelles/Frame_Button_Aktuelles.png" type="Texture" id=5]

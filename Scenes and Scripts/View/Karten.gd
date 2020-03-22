@@ -11,9 +11,11 @@ var Bettkosten
 var Geldkosten
 var Seckosten
 var Instanz
+var CardViews
 
 
-var Karte = preload("res://Scenes and Scripts/EineKarte.tscn")
+var Karte = preload("res://Scenes and Scripts/View/EineKarte.tscn")
+var ActionFactory = preload("res://Scenes and Scripts/Model/ActionFactory.gd")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -47,16 +49,16 @@ func _on_Schlieen_pressed():
 func Button_pressed(Instance):
 	Instanz = Instance
 	$"Infoübersicht".show()
-	$"Infoübersicht/Label".set_text(Instance.Beschreibung)
-	$"Infoübersicht/Sprite/Effekt".set_text(Instance.Effekt)
-	$"Infoübersicht/Sprite/Beschreibung".set_text(Instance.Beschreibung)
-	$"Infoübersicht/Sprite/Name".set_text(Instance.Name)
-	Health = Instance.UrsacheHealth
-	Befriedigung = Instance.UrsacheBefriedigung
-	Wirtschaft = Instance.UrsacheWirtschaft
-	Geldkosten = Instance.Geldkosten
-	Bettkosten = Instance.Bettenkosten    #Keine echten Kosten nur values
-	Seckosten = Instance.Securitykosten   #              "
+	$"Infoübersicht/Label".set_text(Instance.cardModel.beschreibung)
+	$"Infoübersicht/Sprite/Effekt".set_text(Instance.cardModel.effect)
+	$"Infoübersicht/Sprite/Beschreibung".set_text(Instance.cardModel.beschreibung)
+	$"Infoübersicht/Sprite/Name".set_text(Instance.cardModel.name)
+	Health = Instance.cardModel.health
+	Befriedigung = Instance.cardModel.satisfaction
+	Wirtschaft = Instance.cardModel.economy
+	Geldkosten = Instance.cardModel.geld
+	Bettkosten = Instance.cardModel.betten    #Keine echten Kosten nur values
+	Seckosten = Instance.cardModel.security   #              "
 	if int(Health) > 0:
 		$"Infoübersicht/Sprite/Control/Gesundheitswesen_status/status_arrow_up".show()
 	elif int(Health) < 0:
@@ -97,40 +99,12 @@ func _on_Aktivieren_pressed():
 
 
 func generate():
-	var file = File.new()
-	file.open("res://Scenes and Scripts/cards.json", file.READ)
-	var jsonText = file.get_as_text()
-	file.close()
-	var resultJson = JSON.parse(jsonText)
-	var CardsArray
-	if resultJson.error == OK:  # If parse OK
-		var data = resultJson.result
-		CardsArray = data
-	else:  # If parse has errors
-		print("Error: ", resultJson.error)
-		print("Error Line: ", resultJson.error_line)
-		print("Error String: ", resultJson.error_string)
-	for i in len(CardsArray):
-		var Instance = Karte.instance()
-		var Name = CardsArray[i]["name"]
-		var Beschreibung = CardsArray[i]["description"]
-		var iconpath = CardsArray[i]["icon"]
-		var Effekt = CardsArray[i]["effectivity"]
-		var health = CardsArray[i]["consequence"][0]["value"]
-		var satisfaction = CardsArray[i]["consequence"][1]["value"]
-		var economy = CardsArray[i]["consequence"][2]["value"]
-		var geld = CardsArray[i]["costs"][2]["value"]
-		var betten = CardsArray[i]["costs"][0]["value"]
-		var security = CardsArray[i]["costs"][1]["value"]
-		Instance.Bettenkosten = betten
-		Instance.Securitykosten = security
-		Instance.Geldkosten = geld
-		Instance.UrsacheBefriedigung = satisfaction
-		Instance.UrsacheWirtschaft = economy
-		Instance.UrsacheHealth = health
-		Instance.Name = Name
-		Instance.Beschreibung = Beschreibung
-		Instance.Effekt = Effekt
-		Instance.iconpath = iconpath
-		Instance.connect("pressed", self, "Button_pressed", [Instance])
-		$ScrollContainer/HBoxContainer.add_child(Instance)
+	CardViews = []
+	var cardModels = ActionFactory.generateCards()
+	for card in cardModels:
+		var cardView = Karte.instance()
+		cardView.setModel(card)
+		
+		cardView.connect("pressed", self, "Button_pressed", [cardView])
+		$ScrollContainer/HBoxContainer.add_child(cardView)
+		CardViews.push_back(cardView)

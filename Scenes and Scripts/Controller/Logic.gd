@@ -40,8 +40,9 @@ var criticalCareBedsByDay = []
 # internal factor
 var factorK = 0.25
 var infectedByDayInternal = []
-var registeredCards = []
+var playedCards = []
 var registeredEvents = []
+var playedEvents = []
 
 #Const
 const infectableStartValue = 80000000
@@ -82,46 +83,57 @@ func FinishDay():
 	infectedByDay.push_back(infectedByDayInternal[-1] - dead[-1] - cured[-1])
 	addResourceStatistics()
 	day += 1
+	handleEvents()
 
-func registerCard(card):
+func registerCard(action):
 	#instant costs
-	handleCostsOrConsequences(card)
+	handleCostsOrConsequences(action)
 	#daily costs currently not implemented
+	playedCards.push_back(action)
+
+func registerEvent(action):
+	registeredEvents.push_back(action)
+
+func handleEvents():
+	for i in range(registeredEvents.count()):
+		var eventAction = registeredEvents.pop_front()
+		handleCostsOrConsequences(eventAction)
+		playedEvents.push_back(eventAction)
 
 func registerEvent(event):
 	handleCostsOrConsequences(event)
 	
 func handleCostsOrConsequences(obj):
-	if obj.Bettenkosten != "0" and criticalCareBeds > 0:
-		var changeValue = 100 / criticalCareBeds * int(obj.Bettenkosten)
+	if obj.betten != "0" and criticalCareBeds > 0:
+		var changeValue = 100 / criticalCareBeds * int(obj.betten)
 		if (criticalCareBeds + changeValue < 0):
 			criticalCareBeds = 0
 		else:
 			criticalCareBeds += changeValue
 	
-	if obj.Securitykosten != "0" and security > 0:
-		var changeValue = 100 / security * int(obj.Securitykosten)
+	if obj.security != "0" and security > 0:
+		var changeValue = 100 / security * int(obj.security)
 		if (security + changeValue < 0):
 			security = 0
 		else:
 			security += changeValue
 	
-	if obj.UrsacheWirtschaft != "0" and economy > 0:
-		var changeValue = 100 / economy * int(obj.UrsacheWirtschaft)
+	if obj.economy != "0" and economy > 0:
+		var changeValue = 100 / economy * int(obj.economy)
 		if (economy + changeValue < 0):
 			economy = 0
 		else:
 			economy += changeValue
 	
-	if obj.UrsacheBefriedigung != "0" and satisfaction > 0:
-		var changeValue = 100 / satisfaction * int(obj.UrsacheBefriedigung)
+	if obj.satisfaction != "0" and satisfaction > 0:
+		var changeValue = 100 / satisfaction * int(obj.satisfaction)
 		if (satisfaction + changeValue < 0):
 			satisfaction = 0
 		else:
 			satisfaction += changeValue
 	
-	if obj.UrsacheHealth != "0" and healthsystem > 0:
-		var changeValue = 100 / healthsystem * int(obj.UrsacheHealth)
+	if obj.health != "0" and healthsystem > 0:
+		var changeValue = 100 / healthsystem * int(obj.health)
 		if (healthsystem + changeValue < 0):
 			healthsystem = 0
 		else:
