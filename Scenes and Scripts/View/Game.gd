@@ -29,6 +29,7 @@ var wirk_Gesunde = 0
 
 var logic = load("res://Scenes and Scripts/Controller/Logic.gd").new()
 var eventGenerator = load("res://Scenes and Scripts/Controller/EventGenerator.gd").new()
+var Event = load("res://Scenes and Scripts/View/EinEvent.tscn")
 
 var card
 
@@ -105,11 +106,26 @@ func _on_Button_TagEnde_pressed():
 	
 	# calculate new numbers
 	logic.FinishDay()
-	var news = logic.getNews()
 	
+	# get the news and make an independent copy
+	var tempnews = logic.getNews()
+	var thenews = tempnews.duplicate(true)
+	# invert our independendt copy to show newest news first
+	thenews.invert()
+	
+	# remove all existing news entries since we will add all of them again
+	var old_news = $Control/TextureRect/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles/VBoxContainer_Aktuelles_Scrollable.get_children()
+	for oldie in old_news:
+		oldie.queue_free()
 
-
-# ATENTION: THIS FUNCTION GOT HEAVILY HARDCODED FOR THE CURRENT PURPOSE TO MEET THE DEADLINE. DONT USE WITHOUT FURTHER READING
+	# enter new news into the scene. nested because the news array consists of one array per day
+	for a_new in thenews:
+		for a_a_new in a_new:
+			var temp_UI_event = Event.instance()
+			temp_UI_event.setModel(a_a_new)
+			$Control/TextureRect/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles/VBoxContainer_Aktuelles_Scrollable.add_child(temp_UI_event)
+			
+# This function normalizes the plots for infected, dead and cured to our drawing area
 func _normalize_Graph_Points(frame_x_min, frame_x_max, frame_y_min, frame_y_max, input_array1, input_array2, input_array3, array_index):
 	var return_array = []
 	var x_temp_px
@@ -132,6 +148,7 @@ func _normalize_Graph_Points(frame_x_min, frame_x_max, frame_y_min, frame_y_max,
 	
 	# normalize y values and write to return
 	var temp_array = []
+	# which of the inputted arrays shall be normalized and returned
 	match array_index:
 		1:
 			temp_array = input_array1
