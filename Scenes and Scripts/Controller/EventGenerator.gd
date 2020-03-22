@@ -15,3 +15,4 @@ func FinishDay():
 	var eventNum = rng.randi_range(0, events.size() - 1)
 	var event = events[eventNum]
 	Logic.registerEvent(event)
+	return event
