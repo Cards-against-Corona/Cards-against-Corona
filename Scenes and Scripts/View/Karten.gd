@@ -53,6 +53,7 @@ func Button_pressed(Instance):
 	$"Infoübersicht/Sprite/Effekt".set_text(String(Instance.cardModel.effect))
 	$"Infoübersicht/Sprite/Beschreibung".set_text(Instance.cardModel.beschreibung)
 	$"Infoübersicht/Sprite/Name".set_text(Instance.cardModel.name)
+	$"Infoübersicht/Sprite/Sprite".set_texture(load(Instance.cardModel.iconpath))
 	Health = Instance.cardModel.health
 	Befriedigung = Instance.cardModel.satisfaction
 	Wirtschaft = Instance.cardModel.economy
