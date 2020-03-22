@@ -47,6 +47,10 @@ var registeredEvents = []
 const infectableStartValue = 80000000
 const infectedStartValue = 7
 const criticalCareBedStartValue = 28000
+const securityStartValue = 100
+const economyStartValue = 100
+const healthsystemStartValue = 100
+const satisfactionStartValue = 100
 const baseFatalityRate = 0.048
 const recoveryTime = 14
 const criticalCasesFactor = 0.75
@@ -61,6 +65,10 @@ func _init():
 	curedByDay.push_back(0)
 	infectable = infectableStartValue
 	criticalCareBeds = criticalCareBedStartValue
+	security = securityStartValue
+	economy = economyStartValue
+	healthsystem = healthsystemStartValue
+	satisfaction = satisfactionStartValue
 
 func _ready():
 	pass # Replace with function body.
@@ -78,30 +86,48 @@ func FinishDay():
 func registerCard(card):
 	#instant costs
 	handleCostsOrConsequences(card)
+	#daily costs currently not implemented
 
 func registerEvent(event):
-	pass
+	handleCostsOrConsequences(card)
 	
 func handleCostsOrConsequences(obj):
-	if obj.Bettenkosten != 0:
-		var changeValue = 100 / criticalCareBeds * obj.Bettenkosten
-		criticalCareBeds += changeValue
+	if obj.Bettenkosten != "0" and criticalCareBeds > 0:
+		var changeValue = 100 / criticalCareBeds * int(obj.Bettenkosten)
+		if (criticalCareBeds + changeValue < 0):
+			criticalCareBeds = 0
+		else:
+			criticalCareBeds += changeValue
 	
-	if obj.Securitykosten != 0:
-		var changeValue = 100 / security * obj.Securitykosten
-		security += changeValue
+	if obj.Securitykosten != "0" and security > 0:
+		var changeValue = 100 / security * int(obj.Securitykosten)
+		if (security + changeValue < 0):
+			security = 0
+		else:
+			security += changeValue
 	
-	if obj.UrsacheWirtschaft != 0:
-		var changeValue = 100 / economy * obj.UrsacheWirtschaft
-		economy += changeValue
+	if obj.UrsacheWirtschaft != "0" and economy > 0:
+		var changeValue = 100 / economy * int(obj.UrsacheWirtschaft)
+		if (economy + changeValue < 0):
+			economy = 0
+		else:
+			economy += changeValue
 	
-	if obj.UrsacheBefriedigung != 0:
-		var changeValue = 100 / satisfaction * obj.UrsacheBefriedigung
-		satisfaction += changeValue
+	if obj.UrsacheBefriedigung != "0" and satisfaction > 0:
+		var changeValue = 100 / satisfaction * int(obj.UrsacheBefriedigung)
+		if (satisfaction + changeValue < 0):
+			satisfaction = 0
+		else:
+			satisfaction += changeValue
 	
-	if obj.UrsacheHealth != 0:
-		var changeValue = 100 / healthsystem * obj.UrsacheHealth
-		healthsystem += changeValue
+	if obj.UrsacheHealth != "0" and healthsystem > 0:
+		var changeValue = 100 / healthsystem * int(obj.UrsacheHealth)
+		if (healthsystem + changeValue < 0):
+			healthsystem = 0
+		else:
+			healthsystem += changeValue
+			
+	print(security)
 	
 
 func addResourceStatistics():
