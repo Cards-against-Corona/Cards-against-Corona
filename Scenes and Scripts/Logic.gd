@@ -66,16 +66,15 @@ func _init():
 func _ready():
 	pass # Replace with function body.
 
-func registerCard(name):
+func registerCard(card):
 	#instant costs
 	pass
 
-func registerEvent(name):
+func registerEvent(event):
 	pass
 
 # This function calculates the new infections, deads and cures per day
 func FinishDay():
-	print(day)
 	var newInf = _CalculateNewInfections()
 	newInfected.push_back(newInf)
 	infectedByDayInternal.push_back(infectedByDay[-1] + newInfected[-1])
