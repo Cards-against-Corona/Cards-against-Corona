@@ -71,7 +71,7 @@ func _process(delta):
 	$Control/TextureRect2/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen/HBoxContainer_res_Wirtschaft/Label_res_Wirtschaft_value.text = str(logic.economy) + "%"
 	$Control/TextureRect2/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen/HBoxContainer_res_Sicherheit/Label_res_Sicherheit_value.text = str(logic.security) + "%"
 	$Control/TextureRect2/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen/HBoxContainer_res_Gesundheit/Label_res_Gesundheit_value.text = str(logic.healthsystem) + "%"
-	$Control/TextureRect2/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen/HBoxContainer_res_Betten/Label_res_Betten_value.text = str(logic.criticalCareBeds)
+	$Control/TextureRect2/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen/HBoxContainer_res_Betten/Label_res_Betten_value.text = str(logic.criticalCareBeds*100/28000) + "%"
 	$Control/TextureRect2/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen/HBoxContainer_res_Zufrieden/Label_res_Zufrieden_value.text = str(logic.satisfaction) + "%"
 
 	# set scale numbers
@@ -94,19 +94,21 @@ func cardweitergabe():
 	logic.registerCard(card.cardModel)
 
 func _on_Button_TagEnde_pressed():
-	# trigger events?
-	
-	# calculate new numbers
-	eventGenerator.FinishDay()
-	logic.FinishDay()
-	
-	# update other KPIs
-	
-	# calculate other values
+	# trigger events
+	var new_event
+	new_event = eventGenerator.FinishDay()
 	
 	# enter new entries to the newsfeed
+	#var temp_container = HBoxContainer.new()
+	#var temp_label = Label.new()
+	#temp_label.text = "TEST"
+	#temp_container.addChild(temp_label)
+	#$Control/TextureRect/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles/VBoxContainer_Aktuelles_Scrollable.add_child(temp_container)
 	
-	# enter new entries to the eventlog
+	# calculate new numbers
+	logic.FinishDay()
+	
+
 
 # ATENTION: THIS FUNCTION GOT HEAVILY HARDCODED FOR THE CURRENT PURPOSE TO MEET THE DEADLINE. DONT USE WITHOUT FURTHER READING
 func _normalize_Graph_Points(frame_x_min, frame_x_max, frame_y_min, frame_y_max, input_array1, input_array2, input_array3, array_index):
