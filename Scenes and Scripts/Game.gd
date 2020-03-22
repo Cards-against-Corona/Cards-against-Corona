@@ -46,9 +46,9 @@ func _process(delta):
 	$"Control/TabContainer/COVID-19 Zahlen/Label_Tote".text = "Tote:\n" + str(int(round(logic.deadByDay[-1])))
 	$"Control/TabContainer/COVID-19 Zahlen/Label_Genesene".text = "Genesene:\n" + str(int(round(logic.curedByDay[-1])))
 	
-	$"Control/TabContainer/COVID-19 Zahlen/Coordinate_System/Label_Scale_infected".text = str(int(round(logic.infectedByDay.max())))
-	$"Control/TabContainer/COVID-19 Zahlen/Coordinate_System/Label_Scale_dead".text = str(int(round(logic.deadByDay.max())))
-	$"Control/TabContainer/COVID-19 Zahlen/Coordinate_System/Label_scale_cured".text = str(int(round(logic.curedByDay.max())))
+	$"Control/TabContainer/COVID-19 Zahlen/Label_Scale_Tag".text = "Tag " + str(logic.day)
+	
+
 	
 	# calculate the Graphs
 	
