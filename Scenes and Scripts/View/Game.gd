@@ -28,7 +28,7 @@ var wirk_Tote = 0
 var wirk_Gesunde = 0
 
 var logic = load("res://Scenes and Scripts/Controller/Logic.gd").new()
-var eventGenerator = load("res://Scenes and Scripts/Controller/EventGenerator.gd").new(logic)
+var eventGenerator = load("res://Scenes and Scripts/Controller/EventGenerator.gd").new()
 
 var card
 
@@ -95,8 +95,6 @@ func cardweitergabe():
 
 func _on_Button_TagEnde_pressed():
 	# trigger events
-	var new_event
-	new_event = eventGenerator.FinishDay()
 	
 	# enter new entries to the newsfeed
 	#var temp_container = HBoxContainer.new()
@@ -107,6 +105,7 @@ func _on_Button_TagEnde_pressed():
 	
 	# calculate new numbers
 	logic.FinishDay()
+	var news = logic.getNews()
 	
 
 

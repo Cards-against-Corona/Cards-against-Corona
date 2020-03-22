@@ -37,12 +37,17 @@ var criticalCareBeds = 0
 var criticalCareBedsByDay = []
 
 ####### INTERNAL ######
+# Generators
+var eventGenerator: EventGenerator
+var newsGenerator: NewsGenerator
+
 # internal factor
 var factorK = 0.25
 var infectedByDayInternal = []
 var playedCards = []
 var registeredEvents = []
 var playedEvents = []
+var news = []
 
 #Const
 const infectableStartValue = 80000000
@@ -71,12 +76,17 @@ func _init():
 	healthsystem = healthsystemStartValue
 	satisfaction = satisfactionStartValue
 
+	eventGenerator = EventGenerator.new()
+	newsGenerator = NewsGenerator.new()
+
 func _ready():
 	pass # Replace with function body.
 
 # This function calculates the new infections, deads and cures per day
 func FinishDay():
 	var newInf = _CalculateNewInfections()
+
+	var event = eventGenerator.generateEvent()
 	newInfected.push_back(newInf)
 	infectedByDayInternal.push_back(infectedByDay[-1] + newInfected[-1])
 	_CalculateDeadAndCured()
@@ -84,6 +94,15 @@ func FinishDay():
 	addResourceStatistics()
 	day += 1
 	handleEvents()
+	var newNews = newsGenerator.generateNews(event,
+		infectedByDay[-1], newInf,
+		deadByDay[-1], dead[-1],
+		curedByDay[-1], cured[-1])
+	registerEvent(newNews)
+	news.push_back(newNews)
+
+func getNews():
+	return news
 
 func registerCard(action):
 	#instant costs
@@ -92,7 +111,8 @@ func registerCard(action):
 	playedCards.push_back(action)
 
 func registerEvent(action):
-	registeredEvents.push_back(action)
+	for a in action:
+		registeredEvents.push_back(a)
 
 func handleEvents():
 	for i in range(registeredEvents.size()):
@@ -135,8 +155,6 @@ func handleCostsOrConsequences(obj):
 			healthsystem = 0
 		else:
 			healthsystem += changeValue
-			
-	print(security)
 	
 
 func addResourceStatistics():
