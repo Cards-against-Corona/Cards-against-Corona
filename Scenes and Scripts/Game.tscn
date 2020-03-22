@@ -432,7 +432,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Control"]
+[node name="VBoxContainer_Resourcen" type="VBoxContainer" parent="Control"]
 margin_left = 63.6827
 margin_top = 450.038
 margin_right = 516.683
@@ -441,8 +441,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Control/VBoxContainer2"]
-margin_right = 453.0
+[node name="Label" type="Label" parent="Control/VBoxContainer_Resourcen"]
+margin_right = 454.0
 margin_bottom = 35.0
 custom_styles/normal = SubResource( 10 )
 custom_fonts/font = SubResource( 9 )
@@ -451,57 +451,52 @@ text = "Ressourcen"
 align = 1
 uppercase = true
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="Control/VBoxContainer2"]
+[node name="VBoxContainer_Resourcen_innen" type="VBoxContainer" parent="Control/VBoxContainer_Resourcen"]
 margin_top = 39.0
-margin_right = 453.0
-margin_bottom = 171.0
+margin_right = 454.0
+margin_bottom = 265.0
+size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Geld" type="Label" parent="Control/VBoxContainer2/VBoxContainer3"]
-margin_right = 453.0
-margin_bottom = 30.0
+[node name="Label_Betten" type="Label" parent="Control/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen"]
+margin_right = 454.0
+margin_bottom = 72.0
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
+size_flags_vertical = 3
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Geld: 0$"
+text = "Freie Intensivbetten: 100%"
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Geld2" type="Label" parent="Control/VBoxContainer2/VBoxContainer3"]
-margin_top = 34.0
-margin_right = 453.0
-margin_bottom = 64.0
+[node name="Label_Polizei" type="Label" parent="Control/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen"]
+margin_top = 76.0
+margin_right = 454.0
+margin_bottom = 148.0
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
+size_flags_vertical = 3
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Grundversorgung"
+text = "Sicherheitskräfte: 123456"
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Geld3" type="Label" parent="Control/VBoxContainer2/VBoxContainer3"]
-margin_top = 68.0
-margin_right = 453.0
-margin_bottom = 98.0
+[node name="Label_Geld" type="Label" parent="Control/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen"]
+margin_top = 152.0
+margin_right = 454.0
+margin_bottom = 226.0
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
+size_flags_vertical = 3
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Krankenhausbetten"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Geld4" type="Label" parent="Control/VBoxContainer2/VBoxContainer3"]
-margin_top = 102.0
-margin_right = 453.0
-margin_bottom = 132.0
-rect_pivot_offset = Vector2( 72.5416, 25.5003 )
-custom_fonts/font = SubResource( 6 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Sicherheitskräfte"
+text = "Budget: 999999999999€"
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
