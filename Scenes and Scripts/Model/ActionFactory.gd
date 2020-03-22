@@ -47,7 +47,6 @@ static func generateActions(path: String):
 				elif cost["target"] == "SECURITY_RESSOURCES":
 					Instance.security = cost["value"]
 		instances.push_back(Instance)
-		print("Neue generierte Karte")
 	return instances
 	
 static func generateCards():

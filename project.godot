@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "Logic",
 "language": "GDScript",
 "path": "res://Scenes and Scripts/Controller/Logic.gd"
+}, {
+"base": "Reference",
+"class": "NewsGenerator",
+"language": "GDScript",
+"path": "res://Scenes and Scripts/Controller/NewsGenerator.gd"
 } ]
 _global_script_class_icons={
 "Action": "",
 "EventGenerator": "",
-"Logic": ""
+"Logic": "",
+"NewsGenerator": ""
 }
 
 [application]
