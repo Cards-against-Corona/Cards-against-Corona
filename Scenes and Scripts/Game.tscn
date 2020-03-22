@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=19 format=2]
+=======
+[gd_scene load_steps=21 format=2]
+>>>>>>> d88a58f73a48d6b14d1192ce314125259fbb3b02
 
 [ext_resource path="res://Scenes and Scripts/Karten.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Background_Viren.jpg" type="Texture" id=2]
@@ -42,9 +46,21 @@ font_data = ExtResource( 7 )
 size = 29
 font_data = ExtResource( 6 )
 
+<<<<<<< HEAD
 [sub_resource type="DynamicFont" id=7]
 size = 25
 font_data = ExtResource( 7 )
+=======
+[sub_resource type="DynamicFont" id=12]
+size = 37
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 25
+font_data = ExtResource( 7 )
+
+[sub_resource type="Theme" id=7]
+>>>>>>> d88a58f73a48d6b14d1192ce314125259fbb3b02
 
 [sub_resource type="Theme" id=8]
 
@@ -57,6 +73,10 @@ font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 80
+font_data = ExtResource( 6 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 8 )
@@ -116,8 +136,7 @@ margin_right = -1.0
 margin_bottom = -1.0
 
 [node name="Line2D_infizierte" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
-position = Vector2( 282.135, 417.159 )
-points = PoolVector2Array( -200, 80, 316.836, -44.0809, 611.084, -168.072, 750, -400 )
+position = Vector2( 280, 420 )
 default_color = Color( 1, 0.337255, 0.286275, 1 )
 
 [node name="Legende_infizierte" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
@@ -126,8 +145,9 @@ points = PoolVector2Array( -194.99, 81.0343, -194.99, 37.821 )
 default_color = Color( 1, 0.337255, 0.286275, 1 )
 
 [node name="Line2D_Tote" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
-position = Vector2( 293.018, 436.204 )
-points = PoolVector2Array( -196.475, 68.3441, 259.684, 45.264, 569.086, 5.59723, 727.753, -46.7631 )
+visible = false
+position = Vector2( 280, 420 )
+points = PoolVector2Array( 0, 0, 150, -150 )
 default_color = Color( 0, 0, 0, 1 )
 
 [node name="Legende_Tote2" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
@@ -136,8 +156,7 @@ points = PoolVector2Array( -195.9, 83.0417, -195.9, 34.2882 )
 default_color = Color( 0, 0, 0, 1 )
 
 [node name="Line2D_Genesene" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
-position = Vector2( 309.343, 455.25 )
-points = PoolVector2Array( -196.475, 68.3441, 316.836, -44.0809, 608.295, -94.3685, 733.642, -95.9551 )
+position = Vector2( 280, 420 )
 default_color = Color( 0.376471, 1, 0.286275, 1 )
 
 [node name="Legende_Genesene2" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
@@ -197,6 +216,140 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Line2D_dead" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
+position = Vector2( 280, 420 )
+default_color = Color( 0, 0, 0, 1 )
+
+[node name="Coordinate_System" type="Control" parent="Control/TabContainer/COVID-19 Zahlen"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D2" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
+position = Vector2( 42.7579, 24.5548 )
+points = PoolVector2Array( 1100, 490, 133.593, 490 )
+width = 5.0
+default_color = Color( 0, 0, 0, 1 )
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D3" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
+position = Vector2( 42.6478, 24.5548 )
+points = PoolVector2Array( 1100, 490, 1075, 465 )
+width = 5.0
+default_color = Color( 0, 0, 0, 1 )
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D4" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
+position = Vector2( 42.6478, 24.5548 )
+points = PoolVector2Array( 1100, 490, 1075, 515 )
+width = 5.0
+default_color = Color( 0, 0, 0, 1 )
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
+position = Vector2( 176.778, 24.5548 )
+points = PoolVector2Array( 0, 30, 0, 490 )
+width = 5.0
+default_color = Color( 0, 0, 0, 1 )
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D5" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
+position = Vector2( 176.778, 24.2142 )
+points = PoolVector2Array( 0, 30, 25, 55 )
+width = 5.0
+default_color = Color( 0, 0, 0, 1 )
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D7" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
+position = Vector2( 176.778, 64.038 )
+points = PoolVector2Array( 21.905, 30, -162.095, 30 )
+width = 3.0
+default_color = Color( 0, 0, 0, 1 )
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D8" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
+position = Vector2( 176.778, 24.2142 )
+width = 3.0
+default_color = Color( 0, 0, 0, 1 )
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D6" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
+position = Vector2( 176.778, 24.5548 )
+points = PoolVector2Array( 0, 30, -25, 55 )
+width = 5.0
+default_color = Color( 0, 0, 0, 1 )
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Label" type="Label" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
+margin_left = 1157.93
+margin_top = 498.49
+margin_right = 1228.93
+margin_bottom = 536.49
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Tage"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
+margin_left = 98.3881
+margin_top = 11.4853
+margin_right = 258.388
+margin_bottom = 49.4853
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Betroffene"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_Scale_infected" type="Label" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
+margin_left = 14.6832
+margin_top = 106.862
+margin_right = 130.683
+margin_bottom = 132.862
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 1, 0.337255, 0.286275, 1 )
+text = "80.000.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_Scale_dead" type="Label" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
+margin_left = 14.6832
+margin_top = 130.862
+margin_right = 130.683
+margin_bottom = 156.862
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "80.000.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_scale_cured" type="Label" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
+margin_left = 14.6832
+margin_top = 154.862
+margin_right = 130.683
+margin_bottom = 180.862
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.376471, 1, 0.286275, 1 )
+text = "80.000.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Wirtschaft" type="Control" parent="Control/TabContainer"]
 visible = false
 anchor_right = 1.0
@@ -225,7 +378,7 @@ position = Vector2( 141.488, 561.507 )
 points = PoolVector2Array( 0, 0, 316.836, -44.0809, 611.084, -168.072, 740.627, -388.296 )
 default_color = Color( 0.309804, 1, 0.286275, 1 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+[node name="VBoxContainer_Aktuelles" type="VBoxContainer" parent="Control"]
 margin_left = 64.0
 margin_top = 58.0
 margin_right = 520.0
@@ -235,7 +388,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="Control/VBoxContainer"]
+[node name="Label_Aktuelles" type="Label" parent="Control/VBoxContainer_Aktuelles"]
 margin_right = 456.0
 margin_bottom = 35.0
 custom_styles/normal = SubResource( 9 )
@@ -245,24 +398,33 @@ text = "Aktuelles"
 align = 1
 uppercase = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
+[node name="ScrollContainer_Aktuelles" type="ScrollContainer" parent="Control/VBoxContainer_Aktuelles"]
 margin_top = 39.0
 margin_right = 456.0
-margin_bottom = 140.0
+margin_bottom = 368.0
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer_Aktuelles_Scrollable" type="VBoxContainer" parent="Control/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles"]
+margin_right = 456.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles/VBoxContainer_Aktuelles_Scrollable"]
+margin_right = 456.0
+margin_bottom = 82.0
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles/VBoxContainer_Aktuelles_Scrollable/HBoxContainer"]
 margin_right = 150.0
-margin_bottom = 101.0
+margin_bottom = 82.0
 size_flags_horizontal = 3
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 6
 
-[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles/VBoxContainer_Aktuelles_Scrollable/HBoxContainer"]
 margin_left = 154.0
 margin_right = 456.0
-margin_bottom = 101.0
+margin_bottom = 82.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
@@ -274,89 +436,15 @@ desto
 "
 valign = 1
 
-[node name="HSeparator" type="HSeparator" parent="Control/VBoxContainer"]
-margin_top = 144.0
+[node name="HSeparator" type="HSeparator" parent="Control/VBoxContainer_Aktuelles/ScrollContainer_Aktuelles/VBoxContainer_Aktuelles_Scrollable"]
+margin_top = 86.0
 margin_right = 456.0
-margin_bottom = 148.0
+margin_bottom = 90.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer"]
-margin_top = 152.0
-margin_right = 456.0
-margin_bottom = 253.0
-size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer2"]
-margin_right = 150.0
-margin_bottom = 101.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
-stretch_mode = 6
-
-[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer2"]
-margin_left = 154.0
-margin_right = 456.0
-margin_bottom = 101.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Grüne Neuigkeiten! 
-Je mehr 
-Zeilen ich hier mache
-desto
-größe"
-valign = 1
-
-[node name="HSeparator2" type="HSeparator" parent="Control/VBoxContainer"]
-margin_top = 257.0
-margin_right = 456.0
-margin_bottom = 261.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="Control/VBoxContainer"]
-margin_top = 265.0
-margin_right = 456.0
-margin_bottom = 368.0
-size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer3"]
-margin_right = 150.0
-margin_bottom = 103.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
-stretch_mode = 6
-
-[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer3"]
-margin_left = 154.0
-margin_right = 456.0
-margin_bottom = 103.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Grüne Neuigkeiten! 
-Je mehr 
-Zeilen ich hier mache
-desto
-größe"
-valign = 1
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="Control"]
+[node name="VBoxContainer_Resourcen" type="VBoxContainer" parent="Control"]
 margin_left = 63.6827
 margin_top = 450.038
 margin_right = 516.683
@@ -365,8 +453,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Control/VBoxContainer2"]
-margin_right = 453.0
+[node name="Label" type="Label" parent="Control/VBoxContainer_Resourcen"]
+margin_right = 454.0
 margin_bottom = 35.0
 custom_styles/normal = SubResource( 11 )
 custom_fonts/font = SubResource( 10 )
@@ -375,57 +463,65 @@ text = "Ressourcen"
 align = 1
 uppercase = true
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="Control/VBoxContainer2"]
+[node name="VBoxContainer_Resourcen_innen" type="VBoxContainer" parent="Control/VBoxContainer_Resourcen"]
 margin_top = 39.0
-margin_right = 453.0
-margin_bottom = 171.0
+margin_right = 454.0
+margin_bottom = 265.0
+size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Geld" type="Label" parent="Control/VBoxContainer2/VBoxContainer3"]
-margin_right = 453.0
-margin_bottom = 30.0
+[node name="Label_Betten" type="Label" parent="Control/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen"]
+margin_right = 454.0
+margin_bottom = 72.0
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
+size_flags_vertical = 3
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Geld: 0$"
+text = "Freie Intensivbetten: 100%"
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Geld2" type="Label" parent="Control/VBoxContainer2/VBoxContainer3"]
-margin_top = 34.0
-margin_right = 453.0
-margin_bottom = 64.0
+[node name="Label_Polizei" type="Label" parent="Control/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen"]
+margin_top = 76.0
+margin_right = 454.0
+margin_bottom = 148.0
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
+size_flags_vertical = 3
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Grundversorgung"
+text = "Sicherheitskräfte: 123456"
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Geld3" type="Label" parent="Control/VBoxContainer2/VBoxContainer3"]
-margin_top = 68.0
-margin_right = 453.0
-margin_bottom = 98.0
+[node name="Label_Geld" type="Label" parent="Control/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen"]
+margin_top = 152.0
+margin_right = 454.0
+margin_bottom = 226.0
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
+size_flags_vertical = 3
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Krankenhausbetten"
+text = "Budget: 999999999999€"
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Geld4" type="Label" parent="Control/VBoxContainer2/VBoxContainer3"]
-margin_top = 102.0
-margin_right = 453.0
-margin_bottom = 132.0
-rect_pivot_offset = Vector2( 72.5416, 25.5003 )
-custom_fonts/font = SubResource( 6 )
+[node name="Label_Tag" type="Label" parent="Control"]
+margin_left = 1585.69
+margin_top = 843.492
+margin_right = 1762.69
+margin_bottom = 923.492
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Sicherheitskräfte"
+text = "Tag 999"
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

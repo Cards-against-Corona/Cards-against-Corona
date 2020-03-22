@@ -53,13 +53,11 @@ func _ready():
 
 # This function calculates the new infections, deads and cures per day
 func FinishDay():
-	print(day)
 	var newInf = _CalculateNewInfections()
 	newInfected.push_back(newInf)
 	infectedByDay.push_back(infectedByDay[-1] + newInfected[-1])
 	_CalculateDeadAndCured()
 	day += 1
-	print("------------")
 
 func _CalculateDeadAndCured():
 	var _dead = _CalculateDead()
