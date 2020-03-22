@@ -138,5 +138,40 @@
 		"value": "-10"
 	  }
 	]
+  },
+  {
+	"name": "Atemschutzmaskenpflicht",
+	"icon": "../Assets/cards/Atemschutzmaskenpflicht.png",
+	"description": "In der Öffentlichkeit ist eine Atemschutzmaske zu tragen - sonst drohen Bußgelder.",
+	"effectivity": "5",
+	"consequence": [
+	  {
+		"target": "HEALTH_SYSTEM",
+		"type": "INSTANT",
+		"value": "3"
+	  },
+	  {
+		"target": "SATISFACTION",
+		"type": "INSTANT",
+		"value": "-5"
+	  },
+	  {
+		"target": "ECONOMY",
+		"type": "INSTANT",
+		"value": "1"
+	  }
+	],
+	"costs": [
+	  {
+		"target": "CRITICAL_CARE_BEDS",
+		"type": "INSTANT",
+		"value": "10"
+	  },
+	  {
+		"target": "SECURITY_RESSOURCES",
+		"type": "INSTANT",
+		"value": "0"
+	  }
+	]
   }
 ]
