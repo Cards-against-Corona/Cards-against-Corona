@@ -42,6 +42,8 @@ font_data = ExtResource( 7 )
 size = 29
 font_data = ExtResource( 6 )
 
+<<<<<<< HEAD
+[sub_resource type="DynamicFont" id=7]
 [sub_resource type="DynamicFont" id=7]
 size = 37
 font_data = ExtResource( 7 )
@@ -170,7 +172,7 @@ margin_left = 351.0
 margin_top = 542.0
 margin_right = 462.0
 margin_bottom = 582.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Infizierte:
 80.000.000"
