@@ -95,7 +95,7 @@ func registerEvent(action):
 	registeredEvents.push_back(action)
 
 func handleEvents():
-	for i in range(registeredEvents.count()):
+	for i in range(registeredEvents.size()):
 		var eventAction = registeredEvents.pop_front()
 		handleCostsOrConsequences(eventAction)
 		playedEvents.push_back(eventAction)
