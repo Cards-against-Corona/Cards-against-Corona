@@ -149,3 +149,7 @@ func _normalize_Graph_Points(frame_x_min, frame_x_max, frame_y_min, frame_y_max,
 		return_array.push_back(Vector2(x_temp_px, y_temp_px))
 	
 	return return_array
+
+
+func _on_AudioStreamPlayer_finished():
+	$AudioStreamPlayer.play("res://cards_corona_bg_music_loop.wav")

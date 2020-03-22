@@ -773,3 +773,4 @@ stream = ExtResource( 4 )
 volume_db = -10.097
 autoplay = true
 [connection signal="pressed" from="Control/Button_TagEnde" to="." method="_on_Button_TagEnde_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
