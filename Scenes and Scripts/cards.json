@@ -1,7 +1,7 @@
 [
   {
     "name": "Schließung der Grenzen",
-    "icon": "../Assets/cards/grenzschließung.png",
+    "icon": "res://Assets/cards/grenzschließung.png",
     "description": "Landesweite Schließung der Grenzen zu allen angrenzenden Ländern - Einführung verschärfter Ein- und Ausreisekontrollen.",
     "effectivity": 4,
     "consequence": [
@@ -36,7 +36,7 @@
   },
   {
     "name": "Ausgangssperre",
-    "icon": "../Assets/cards/ausgangssperre.png",
+    "icon": "res://Assets/cards/ausgangssperre.png",
     "description": "Landesweite Einschränkung der öffentlichen Freiheit. Alle Bürger müssen zuhause bleiben.",
     "effectivity": 7,
     "consequence": [
@@ -71,7 +71,7 @@
   },
   {
     "name": "Lebensmittel-Rationierung",
-    "icon": "../Assets/cards/lebensmittelrationierung.png",
+    "icon": "res://Assets/cards/lebensmittelrationierung.png",
     "description": "Pro Haushalt dürfen Waren nur noch in haushaltsüblichen Mengen eingekauft werden. Dies gilt besonders für Hygieneartikel und Konserven.",
     "effectivity": 6,
     "consequence": [
@@ -106,7 +106,7 @@
   },
   {
     "name": "Social-Distancing",
-    "icon": "../Assets/cards/socialdistancing.png",
+    "icon": "res://Assets/cards/socialdistancing.png",
     "description": "Mindestabstand von 1,5 Metern ist einzuhalten - sonst drohen Bußgelder.",
     "effectivity": 3,
     "consequence": [
@@ -141,7 +141,7 @@
   },
   {
     "name": "Atemschutzmaskenpflicht",
-    "icon": "../Assets/cards/Atemschutzmaskenpflicht.png",
+    "icon": "res://Assets/cards/Atemschutzmaskenpflicht.png",
     "description": "In der Öffentlichkeit ist eine Atemschutzmaske zu tragen - sonst drohen Bußgelder.",
     "effectivity": 5,
     "consequence": [

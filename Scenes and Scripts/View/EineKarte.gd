@@ -10,7 +10,7 @@ func _ready():
 	$Handlung.set_text(cardModel.name)
 	$"Effektivität".set_text(str(cardModel.effect))
 	$Beschreibung.set_text(cardModel.beschreibung)
-	#$Sprite.set_texture(cardModel.iconpath)
+	$Sprite.set_texture(load(cardModel.iconpath))
 	if int(cardModel.health) > 0:
 		$"Control/Gesundheitswesen_status/up".show()
 	elif int(cardModel.health) < 0:
