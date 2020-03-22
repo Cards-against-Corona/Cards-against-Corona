@@ -89,7 +89,7 @@ func registerCard(card):
 	#daily costs currently not implemented
 
 func registerEvent(event):
-	handleCostsOrConsequences(card)
+	handleCostsOrConsequences(event)
 	
 func handleCostsOrConsequences(obj):
 	if obj.Bettenkosten != "0" and criticalCareBeds > 0:
