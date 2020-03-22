@@ -76,7 +76,7 @@ func _on_Geld_draw():
 	pass # Replace with function body.
 
 func cardweitergabe():
-	logic.registerCard(card)
+	logic.registerCard(card.cardModel)
 
 func _on_Button_TagEnde_pressed():
 	# trigger events?

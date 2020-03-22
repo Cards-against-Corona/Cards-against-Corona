@@ -10,6 +10,7 @@ var effect
 var health
 var satisfaction
 var economy
+#deprecated
 var geld
 var betten
 var security
