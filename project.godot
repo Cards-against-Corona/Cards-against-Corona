@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Logic",
 "language": "GDScript",
-"path": "res://Scenes and Scripts/Logic.gd"
+"path": "res://Scenes and Scripts/Controller/Logic.gd"
 } ]
 _global_script_class_icons={
 "Logic": ""
@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Cards against Corona"
-run/main_scene="res://Scenes and Scripts/Game.tscn"
+run/main_scene="res://Scenes and Scripts/View/Game.tscn"
 config/icon="res://icon.png"
 
 [display]

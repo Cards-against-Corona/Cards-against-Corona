@@ -13,7 +13,7 @@ var Seckosten
 var Instanz
 
 
-var Karte = preload("res://Scenes and Scripts/EineKarte.tscn")
+var Karte = preload("res://Scenes and Scripts/View/EineKarte.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
