@@ -1,33 +1,34 @@
 [
-	{
-		"name": "Hamsterkäufe",
-		"icon": "some-icon.png",
-		"description": "Besorgte Bürger leeren die Supermarktregale",
-		"consequence": [
-			{
-				"target":"one of HEALTH_SYSTEM, SATISFACTION, ECONOMY, CRITICAL_CARE_BEDS, SECURITY_RESSOURCES, CASH",
-				"icon":"xyz.png",
-				"description":"...",
-				"type":"one of INSTANT, DAILY",
-				"value": 5,
-				"source":""
-			},
-			{
-				"target":"one of HEALTH_SYSTEM, SATISFACTION, ECONOMY, CRITICAL_CARE_BEDS, SECURITY_RESSOURCES, CASH",
-				"icon":"xyz.png",
-				"description":"...",
-				"type":"one of INSTANT, DAILY",
-				"value": 5,
-				"source":""
-			},
-			{
-				"target":"one of HEALTH_SYSTEM, SATISFACTION, ECONOMY, CRITICAL_CARE_BEDS, SECURITY_RESSOURCES, CASH",
-				"icon":"xyz.png",
-				"description":"...",
-				"type":"one of INSTANT, DAILY",
-				"value": 5,
-				"source":""
-			}
-		]
-	}
+  {
+    "name": "Hamsterkäufe",
+    "icon": "some-icon.png",
+    "description": "Besorgte Bürger leeren die Supermarktregale",
+    "effectivity": 1,
+    "consequence": [
+      {
+        "target": "one of HEALTH_SYSTEM, SATISFACTION, ECONOMY, CRITICAL_CARE_BEDS, SECURITY_RESSOURCES, CASH",
+        "icon": "xyz.png",
+        "description": "...",
+        "type": "one of INSTANT, DAILY",
+        "value": 5,
+        "source": ""
+      },
+      {
+        "target": "one of HEALTH_SYSTEM, SATISFACTION, ECONOMY, CRITICAL_CARE_BEDS, SECURITY_RESSOURCES, CASH",
+        "icon": "xyz.png",
+        "description": "...",
+        "type": "one of INSTANT, DAILY",
+        "value": 5,
+        "source": ""
+      },
+      {
+        "target": "one of HEALTH_SYSTEM, SATISFACTION, ECONOMY, CRITICAL_CARE_BEDS, SECURITY_RESSOURCES, CASH",
+        "icon": "xyz.png",
+        "description": "...",
+        "type": "one of INSTANT, DAILY",
+        "value": 5,
+        "source": ""
+      }
+    ]
+  }
 ]

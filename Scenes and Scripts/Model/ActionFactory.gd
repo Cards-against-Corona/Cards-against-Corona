@@ -24,12 +24,28 @@ static func generateActions(path: String):
 		Instance.beschreibung = card["description"]
 		Instance.iconpath = card["icon"]
 		Instance.effect = card["effectivity"]
-		Instance.health = card["consequence"][0]["value"]
-		Instance.satisfaction = card["consequence"][1]["value"]
-		Instance.economy = card["consequence"][2]["value"]
+		Instance.health = 0
+		Instance.satisfaction = 0
+		Instance.economy = 0
+		for consequence in card["consequence"]:
+			var target = consequence["target"]
+			var value = consequence["value"]
+			if target == "HEALTH_SYSTEM":
+				Instance.health = value
+			elif target == "SATISFACTION":
+				Instance.satisfaction = value
+			elif target == "ECONOMY":
+				Instance.economy = value
+		
 		Instance.geld = 0 # deprecated
-		Instance.betten = card["costs"][0]["value"]
-		Instance.security = card["costs"][1]["value"]
+		Instance.betten = 0
+		Instance.security = 0
+		if card.has('cost'):
+			for cost in card["costs"]:
+				if cost["target"] == "CRITICAL_CARE_BEDS":
+					Instance.betten = cost["value"]
+				elif cost["target"] == "SECURITY_RESSOURCES":
+					Instance.security = cost["value"]
 		instances.push_back(Instance)
 		print("Neue generierte Karte")
 	return instances
