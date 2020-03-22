@@ -91,8 +91,10 @@ func Button_pressed(Instance):
 func _on_Aktivieren_pressed():
 	$"Infoübersicht".hide()
 	$"Infoübersicht/Label".set_text("Dies sind die Vor- und Nachteile dieser Karte: Geld -100 Ansehen -15")
+	get_parent().card = Instanz
+	get_parent().cardweitergabe()
 	$ScrollContainer/HBoxContainer.remove_child(Instanz)
-	#Rechne alles zu minus bei Game.tscn
+
 
 func generate():
 	var file = File.new()
