@@ -29,6 +29,7 @@ var wirk_Gesunde = 0
 
 var logic = load("res://Scenes and Scripts/Logic.gd").new()
 
+var card
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -74,6 +75,8 @@ func _process(delta):
 func _on_Geld_draw():
 	pass # Replace with function body.
 
+func cardweitergabe():
+	logic.registerCard(card)
 
 func _on_Button_TagEnde_pressed():
 	# trigger events?
