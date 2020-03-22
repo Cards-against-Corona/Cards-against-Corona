@@ -100,9 +100,6 @@ func handleEvents():
 		handleCostsOrConsequences(eventAction)
 		playedEvents.push_back(eventAction)
 
-func registerEvent(event):
-	handleCostsOrConsequences(event)
-	
 func handleCostsOrConsequences(obj):
 	if obj.betten != "0" and criticalCareBeds > 0:
 		var changeValue = 100 / criticalCareBeds * int(obj.betten)
