@@ -93,35 +93,35 @@ func registerEvent(event):
 	
 func handleCostsOrConsequences(obj):
 	if obj.Bettenkosten != "0" and criticalCareBeds > 0:
-		var changeValue = 100 / criticalCareBeds * int(obj.Bettenkosten)
+		var changeValue = 100 / criticalCareBeds * int(obj.cardModel.betten)
 		if (criticalCareBeds + changeValue < 0):
 			criticalCareBeds = 0
 		else:
 			criticalCareBeds += changeValue
 	
 	if obj.Securitykosten != "0" and security > 0:
-		var changeValue = 100 / security * int(obj.Securitykosten)
+		var changeValue = 100 / security * int(obj.cardModel.security)
 		if (security + changeValue < 0):
 			security = 0
 		else:
 			security += changeValue
 	
 	if obj.UrsacheWirtschaft != "0" and economy > 0:
-		var changeValue = 100 / economy * int(obj.UrsacheWirtschaft)
+		var changeValue = 100 / economy * int(obj.cardModel.economy)
 		if (economy + changeValue < 0):
 			economy = 0
 		else:
 			economy += changeValue
 	
 	if obj.UrsacheBefriedigung != "0" and satisfaction > 0:
-		var changeValue = 100 / satisfaction * int(obj.UrsacheBefriedigung)
+		var changeValue = 100 / satisfaction * int(obj.cardModel.satisfaction)
 		if (satisfaction + changeValue < 0):
 			satisfaction = 0
 		else:
 			satisfaction += changeValue
 	
 	if obj.UrsacheHealth != "0" and healthsystem > 0:
-		var changeValue = 100 / healthsystem * int(obj.UrsacheHealth)
+		var changeValue = 100 / healthsystem * int(obj.cardModel.health)
 		if (healthsystem + changeValue < 0):
 			healthsystem = 0
 		else:
