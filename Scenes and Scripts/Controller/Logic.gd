@@ -101,35 +101,35 @@ func handleEvents():
 		playedEvents.push_back(eventAction)
 
 func handleCostsOrConsequences(obj):
-	if obj.betten != "0" and criticalCareBeds > 0:
+	if obj.betten != 0 and criticalCareBeds > 0:
 		var changeValue = 100 / criticalCareBeds * int(obj.betten)
 		if (criticalCareBeds + changeValue < 0):
 			criticalCareBeds = 0
 		else:
 			criticalCareBeds += changeValue
 	
-	if obj.security != "0" and security > 0:
+	if obj.security != 0 and security > 0:
 		var changeValue = 100 / security * int(obj.security)
 		if (security + changeValue < 0):
 			security = 0
 		else:
 			security += changeValue
 	
-	if obj.economy != "0" and economy > 0:
+	if obj.economy != 0 and economy > 0:
 		var changeValue = 100 / economy * int(obj.economy)
 		if (economy + changeValue < 0):
 			economy = 0
 		else:
 			economy += changeValue
 	
-	if obj.satisfaction != "0" and satisfaction > 0:
+	if obj.satisfaction != 0 and satisfaction > 0:
 		var changeValue = 100 / satisfaction * int(obj.satisfaction)
 		if (satisfaction + changeValue < 0):
 			satisfaction = 0
 		else:
 			satisfaction += changeValue
 	
-	if obj.health != "0" and healthsystem > 0:
+	if obj.health != 0 and healthsystem > 0:
 		var changeValue = 100 / healthsystem * int(obj.health)
 		if (healthsystem + changeValue < 0):
 			healthsystem = 0

@@ -1,177 +1,177 @@
 [
   {
-	"name": "Schließung der Grenzen",
-	"icon": "../Assets/cards/grenzschließung.png",
-	"description": "Landesweite Schließung der Grenzen zu allen angrenzenden Ländern - Einführung verschärfter Ein- und Ausreisekontrollen.",
-	"effectivity": "4",
-	"consequence": [
-	  {
-		"target": "HEALTH_SYSTEM",
-		"type": "DAILY",
-		"value": "6"
-	  },
-	  {
-		"target": "SATISFACTION",
-		"type": "DAILY",
-		"value": "-3"
-	  },
-	  {
-		"target": "ECONOMY",
-		"type": "DAILY",
-		"value": "-5"
-	  }
-	],
-	"costs": [
-	  {
-		"target": "CRITICAL_CARE_BEDS",
-		"type": "INSTANT",
-		"value": "0"
-	  },
-	  {
-		"target": "SECURITY_RESSOURCES",
-		"type": "INSTANT",
-		"value": "-10"
-	  }
-	]
+    "name": "Schließung der Grenzen",
+    "icon": "../Assets/cards/grenzschließung.png",
+    "description": "Landesweite Schließung der Grenzen zu allen angrenzenden Ländern - Einführung verschärfter Ein- und Ausreisekontrollen.",
+    "effectivity": 4,
+    "consequence": [
+      {
+        "target": "HEALTH_SYSTEM",
+        "type": "DAILY",
+        "value": 6
+      },
+      {
+        "target": "SATISFACTION",
+        "type": "DAILY",
+        "value": -3
+      },
+      {
+        "target": "ECONOMY",
+        "type": "DAILY",
+        "value": -5
+      }
+    ],
+    "costs": [
+      {
+        "target": "CRITICAL_CARE_BEDS",
+        "type": "INSTANT",
+        "value": 0
+      },
+      {
+        "target": "SECURITY_RESSOURCES",
+        "type": "INSTANT",
+        "value": -10
+      }
+    ]
   },
   {
-	"name": "Ausgangssperre",
-	"icon": "../Assets/cards/ausgangssperre.png",
-	"description": "Landesweite Einschränkung der öffentlichen Freiheit. Alle Bürger müssen zuhause bleiben.",
-	"effectivity": "7",
-	"consequence": [
-	  {
-		"target": "HEALTH_SYSTEM",
-		"type": "DAILY",
-		"value": "3"
-	  },
-	  {
-		"target": "SATISFACTION",
-		"type": "DAILY",
-		"value": "-2"
-	  },
-	  {
-		"target": "ECONOMY",
-		"type": "DAILY",
-		"value": "-5"
-	  }
-	],
-	"costs": [
-	  {
-		"target": "CRITICAL_CARE_BEDS",
-		"type": "INSTANT",
-		"value": "0"
-	  },
-	  {
-		"target": "SECURITY_RESSOURCES",
-		"type": "INSTANT",
-		"value": "15"
-	  }
-	]
+    "name": "Ausgangssperre",
+    "icon": "../Assets/cards/ausgangssperre.png",
+    "description": "Landesweite Einschränkung der öffentlichen Freiheit. Alle Bürger müssen zuhause bleiben.",
+    "effectivity": 7,
+    "consequence": [
+      {
+        "target": "HEALTH_SYSTEM",
+        "type": "DAILY",
+        "value": 3
+      },
+      {
+        "target": "SATISFACTION",
+        "type": "DAILY",
+        "value": -2
+      },
+      {
+        "target": "ECONOMY",
+        "type": "DAILY",
+        "value": -5
+      }
+    ],
+    "costs": [
+      {
+        "target": "CRITICAL_CARE_BEDS",
+        "type": "INSTANT",
+        "value": 0
+      },
+      {
+        "target": "SECURITY_RESSOURCES",
+        "type": "INSTANT",
+        "value": 15
+      }
+    ]
   },
   {
-	"name": "Lebensmittel-Rationierung",
-	"icon": "../Assets/cards/lebensmittelrationierung.png",
-	"description": "Pro Haushalt dürfen Waren nur noch in haushaltsüblichen Mengen eingekauft werden. Dies gilt besonders für Hygieneartikel und Konserven.",
-	"effectivity": "6",
-	"consequence": [
-	  {
-		"target": "HEALTH_SYSTEM",
-		"type": "INSTANT",
-		"value": "10"
-	  },
-	  {
-		"target": "SATISFACTION",
-		"type": "DAILY",
-		"value": "-1"
-	  },
-	  {
-		"target": "ECONOMY",
-		"type": "INSTANT",
-		"value": "10"
-	  }
-	],
-	"costs": [
-	  {
-		"target": "CRITICAL_CARE_BEDS",
-		"type": "INSTANT",
-		"value": "0"
-	  },
-	  {
-		"target": "SECURITY_RESSOURCES",
-		"type": "INSTANT",
-		"value": "-10"
-	  }
-	]
+    "name": "Lebensmittel-Rationierung",
+    "icon": "../Assets/cards/lebensmittelrationierung.png",
+    "description": "Pro Haushalt dürfen Waren nur noch in haushaltsüblichen Mengen eingekauft werden. Dies gilt besonders für Hygieneartikel und Konserven.",
+    "effectivity": 6,
+    "consequence": [
+      {
+        "target": "HEALTH_SYSTEM",
+        "type": "INSTANT",
+        "value": 10
+      },
+      {
+        "target": "SATISFACTION",
+        "type": "DAILY",
+        "value": -1
+      },
+      {
+        "target": "ECONOMY",
+        "type": "INSTANT",
+        "value": 10
+      }
+    ],
+    "costs": [
+      {
+        "target": "CRITICAL_CARE_BEDS",
+        "type": "INSTANT",
+        "value": 0
+      },
+      {
+        "target": "SECURITY_RESSOURCES",
+        "type": "INSTANT",
+        "value": -10
+      }
+    ]
   },
   {
-	"name": "Social-Distancing",
-	"icon": "../Assets/cards/socialdistancing.png",
-	"description": "Mindestabstand von 1,5 Metern ist einzuhalten - sonst drohen Bußgelder.",
-	"effectivity": "3",
-	"consequence": [
-	  {
-		"target": "HEALTH_SYSTEM",
-		"type": "INSTANT",
-		"value": "10"
-	  },
-	  {
-		"target": "SATISFACTION",
-		"type": "DAILY",
-		"value": "0"
-	  },
-	  {
-		"target": "ECONOMY",
-		"type": "INSTANT",
-		"value": "0"
-	  }
-	],
-	"costs": [
-	  {
-		"target": "CRITICAL_CARE_BEDS",
-		"type": "INSTANT",
-		"value": "10"
-	  },
-	  {
-		"target": "SECURITY_RESSOURCES",
-		"type": "INSTANT",
-		"value": "-10"
-	  }
-	]
+    "name": "Social-Distancing",
+    "icon": "../Assets/cards/socialdistancing.png",
+    "description": "Mindestabstand von 1,5 Metern ist einzuhalten - sonst drohen Bußgelder.",
+    "effectivity": 3,
+    "consequence": [
+      {
+        "target": "HEALTH_SYSTEM",
+        "type": "INSTANT",
+        "value": 10
+      },
+      {
+        "target": "SATISFACTION",
+        "type": "DAILY",
+        "value": 0
+      },
+      {
+        "target": "ECONOMY",
+        "type": "INSTANT",
+        "value": 0
+      }
+    ],
+    "costs": [
+      {
+        "target": "CRITICAL_CARE_BEDS",
+        "type": "INSTANT",
+        "value": 10
+      },
+      {
+        "target": "SECURITY_RESSOURCES",
+        "type": "INSTANT",
+        "value": -10
+      }
+    ]
   },
   {
-	"name": "Atemschutzmaskenpflicht",
-	"icon": "../Assets/cards/Atemschutzmaskenpflicht.png",
-	"description": "In der Öffentlichkeit ist eine Atemschutzmaske zu tragen - sonst drohen Bußgelder.",
-	"effectivity": "5",
-	"consequence": [
-	  {
-		"target": "HEALTH_SYSTEM",
-		"type": "INSTANT",
-		"value": "3"
-	  },
-	  {
-		"target": "SATISFACTION",
-		"type": "INSTANT",
-		"value": "-5"
-	  },
-	  {
-		"target": "ECONOMY",
-		"type": "INSTANT",
-		"value": "1"
-	  }
-	],
-	"costs": [
-	  {
-		"target": "CRITICAL_CARE_BEDS",
-		"type": "INSTANT",
-		"value": "10"
-	  },
-	  {
-		"target": "SECURITY_RESSOURCES",
-		"type": "INSTANT",
-		"value": "0"
-	  }
-	]
+    "name": "Atemschutzmaskenpflicht",
+    "icon": "../Assets/cards/Atemschutzmaskenpflicht.png",
+    "description": "In der Öffentlichkeit ist eine Atemschutzmaske zu tragen - sonst drohen Bußgelder.",
+    "effectivity": 5,
+    "consequence": [
+      {
+        "target": "HEALTH_SYSTEM",
+        "type": "INSTANT",
+        "value": 3
+      },
+      {
+        "target": "SATISFACTION",
+        "type": "INSTANT",
+        "value": -5
+      },
+      {
+        "target": "ECONOMY",
+        "type": "INSTANT",
+        "value": 1
+      }
+    ],
+    "costs": [
+      {
+        "target": "CRITICAL_CARE_BEDS",
+        "type": "INSTANT",
+        "value": 10
+      },
+      {
+        "target": "SECURITY_RESSOURCES",
+        "type": "INSTANT",
+        "value": 0
+      }
+    ]
   }
 ]

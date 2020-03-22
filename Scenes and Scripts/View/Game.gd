@@ -28,6 +28,7 @@ var wirk_Tote = 0
 var wirk_Gesunde = 0
 
 var logic = load("res://Scenes and Scripts/Controller/Logic.gd").new()
+var eventGenerator = load("res://Scenes and Scripts/Controller/EventGenerator.gd").new(logic)
 
 var card
 
@@ -82,6 +83,7 @@ func _on_Button_TagEnde_pressed():
 	# trigger events?
 	
 	# calculate new numbers
+	eventGenerator.FinishDay()
 	logic.FinishDay()
 	
 	# update other KPIs

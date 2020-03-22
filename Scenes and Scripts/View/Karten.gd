@@ -50,7 +50,7 @@ func Button_pressed(Instance):
 	Instanz = Instance
 	$"Infoübersicht".show()
 	$"Infoübersicht/Label".set_text(Instance.cardModel.beschreibung)
-	$"Infoübersicht/Sprite/Effekt".set_text(Instance.cardModel.effect)
+	$"Infoübersicht/Sprite/Effekt".set_text(String(Instance.cardModel.effect))
 	$"Infoübersicht/Sprite/Beschreibung".set_text(Instance.cardModel.beschreibung)
 	$"Infoübersicht/Sprite/Name".set_text(Instance.cardModel.name)
 	Health = Instance.cardModel.health
