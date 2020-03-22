@@ -25,10 +25,24 @@ var infectable = 0
 # count of critical care beds
 var criticalCareBeds = 0
 
+#Ressources and Costs
+var economy = 0
+var economyByDay = []
+var security = 0
+var securityByDay = []
+var healthsystem = 0
+var healthsystemByDay = []
+var criticalCare = 0
+var criticalCareByDay = []
+var satisfaction = 0
+var satisfactionByDay = []
+
 ####### INTERNAL ######
 # internal factor
 var factorK = 0.25
 var infectedByDayInternal = []
+var registeredCards = []
+var registeredEvents = []
 
 #Const
 const infectableStartValue = 80000000
@@ -51,6 +65,13 @@ func _init():
 
 func _ready():
 	pass # Replace with function body.
+
+func registerCard(name):
+	#instant costs
+	pass
+
+func registerEvent(name):
+	pass
 
 # This function calculates the new infections, deads and cures per day
 func FinishDay():
