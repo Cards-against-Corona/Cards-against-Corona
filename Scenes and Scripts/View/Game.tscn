@@ -1,78 +1,112 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Scenes and Scripts/View/Karten.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Background_Viren.jpg" type="Texture" id=2]
 [ext_resource path="res://Assets/Green.png" type="Texture" id=3]
 [ext_resource path="res://cards_corona_bg_music_loop.wav" type="AudioStream" id=4]
-[ext_resource path="res://Assets/Ergebnisse/Main_Layout_BG.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Aktuelles/Frame_Button_Aktuelles.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Fonts/Carlito-Bold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Assets/Fonts/Carlito-Regular.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Scenes and Scripts/View/Game.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFont" id=1]
+[ext_resource path="res://Scenes and Scripts/active_button.stylebox" type="StyleBox" id=9]
+[ext_resource path="res://Assets/Aktuelles/Frame_Aktuelles.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Ressourcen/Frame_Button_Ressource.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Kurve/Frame_Button_activated.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Kurve/Kurvenachse_ohneBeschriftung.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Kurve/Frame_Kurve.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Kurve/Frame_Button_deactivated.png" type="Texture" id=15]
+[ext_resource path="res://Scenes and Scripts/disabled_button.stylebox" type="StyleBox" id=16]
+[ext_resource path="res://Assets/Ressourcen/Frame_Ressourcen.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Ressourcen/Icon_Wirtschaft.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Ressourcen/Icon_Sicherheitskraefte.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Ressourcen/Icon_Gesundheitswesen.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Ressourcen/Icon_Intensivbetten.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Ressourcen/Icon_Zufriedenheit.png" type="Texture" id=22]
+[ext_resource path="res://Assets/RechtsUnten/Deutschlandkarte.png" type="Texture" id=23]
+
+[sub_resource type="DynamicFont" id=3]
 size = 25
 font_data = ExtResource( 7 )
 
-[sub_resource type="Theme" id=2]
+[sub_resource type="Theme" id=4]
 
-[sub_resource type="StyleBoxTexture" id=3]
+[sub_resource type="StyleBoxTexture" id=5]
 texture = ExtResource( 5 )
-region_rect = Rect2( 0, 0, 1392, 238 )
+region_rect = Rect2( 0, 0, 332, 48 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 34
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxTexture" id=5]
-texture = ExtResource( 9 )
-region_rect = Rect2( 0, 0, 1302, 206 )
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 444, 93 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 10.0
+margin_bottom = 10.0
 
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color( 0.0705882, 0.117647, 0.188235, 1 )
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 15 )
+region_rect = Rect2( 0, 0, 444, 85 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 15 )
+region_rect = Rect2( 0, 0, 444, 85 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 10.0
+margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 14 )
+region_rect = Rect2( 0, 0, 1307, 610 )
+
+[sub_resource type="DynamicFont" id=11]
 size = 25
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=12]
 size = 26
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=9]
-size = 37
-font_data = ExtResource( 7 )
-
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=13]
 size = 25
 font_data = ExtResource( 7 )
 
-[sub_resource type="StyleBoxTexture" id=11]
-texture = ExtResource( 5 )
-region_rect = Rect2( 0, 0, 1392, 238 )
+[sub_resource type="StyleBoxTexture" id=14]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 332, 48 )
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=15]
 size = 20
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="DynamicFont" id=16]
 size = 80
 font_data = ExtResource( 6 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 8 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 56.0, 712.0, 1024.0 ],
+"_edit_horizontal_guides_": [ 56.0, 712.0, 1024.0, 632.0 ],
 "_edit_vertical_guides_": [ 64.0, 1856.0, 448.0 ]
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 1936.0
+margin_bottom = 1096.0
+__meta__ = {
+"_edit_use_anchors_": false
 }
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -8.63391, -36.6941 )
-scale = Vector2( 1.22297, 1.22297 )
+scale = Vector2( 0.564843, 0.564843 )
 texture = ExtResource( 2 )
 centered = false
 
@@ -88,8 +122,27 @@ margin_left = 1583.68
 margin_top = 978.038
 margin_right = 1852.68
 margin_bottom = 1026.04
-custom_fonts/font = SubResource( 1 )
-text = "Tag beenden"
+custom_styles/hover = ExtResource( 9 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/focus = ExtResource( 9 )
+custom_styles/normal = ExtResource( 9 )
+custom_fonts/font = SubResource( 3 )
+text = "NÄCHSTER TAG"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_Land" type="Button" parent="Control"]
+margin_left = 1584.0
+margin_top = 920.0
+margin_right = 1853.0
+margin_bottom = 968.002
+custom_styles/hover = ExtResource( 16 )
+custom_styles/pressed = ExtResource( 16 )
+custom_styles/focus = ExtResource( 16 )
+custom_styles/normal = ExtResource( 16 )
+custom_fonts/font = SubResource( 3 )
+text = "LÄNDERAUSWAHL"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -111,7 +164,7 @@ margin_left = 32.0
 margin_top = 40.0
 margin_right = 352.0
 margin_bottom = 616.0
-theme = SubResource( 2 )
+theme = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -119,8 +172,8 @@ __meta__ = {
 [node name="Label_Aktuelles" type="Label" parent="Control/TextureRect/VBoxContainer_Aktuelles"]
 margin_right = 320.0
 margin_bottom = 35.0
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Aktuelles"
 align = 1
@@ -179,9 +232,11 @@ margin_left = 501.832
 margin_top = 58.038
 margin_right = 1853.83
 margin_bottom = 714.038
-custom_styles/tab_fg = SubResource( 5 )
-custom_styles/panel = SubResource( 6 )
-custom_fonts/font = SubResource( 7 )
+custom_styles/tab_fg = SubResource( 7 )
+custom_styles/tab_disabled = SubResource( 8 )
+custom_styles/tab_bg = SubResource( 9 )
+custom_styles/panel = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 tab_align = 0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -190,18 +245,15 @@ __meta__ = {
 [node name="COVID-19 Zahlen" type="Control" parent="Control/TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 3.0
-margin_top = 39.0
-margin_right = -3.0
-margin_bottom = -3.0
+margin_top = 46.0
 
 [node name="Line2D_infizierte" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
 position = Vector2( 280, 420 )
 default_color = Color( 1, 0.337255, 0.286275, 1 )
 
 [node name="Legende_infizierte" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
-position = Vector2( 530.335, 510.234 )
-points = PoolVector2Array( -194.99, 81.0343, -194.99, 37.821 )
+position = Vector2( 494.933, 487.962 )
+points = PoolVector2Array( -192, 96, -192, 40 )
 default_color = Color( 1, 0.337255, 0.286275, 1 )
 
 [node name="Line2D_Tote" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
@@ -211,8 +263,8 @@ points = PoolVector2Array( 0, 0, 150, -150 )
 default_color = Color( 0, 0, 0, 1 )
 
 [node name="Legende_Tote2" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
-position = Vector2( 865.693, 510.808 )
-points = PoolVector2Array( -195.9, 83.0417, -195.9, 34.2882 )
+position = Vector2( 726.933, 487.962 )
+points = PoolVector2Array( -195.9, 96, -195.9, 40 )
 default_color = Color( 0, 0, 0, 1 )
 
 [node name="Line2D_Genesene" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
@@ -220,16 +272,16 @@ position = Vector2( 280, 420 )
 default_color = Color( 0.376471, 1, 0.286275, 1 )
 
 [node name="Legende_Genesene2" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen"]
-position = Vector2( 1155.94, 509.543 )
-points = PoolVector2Array( -196.475, 88.3733, -196.712, 38.5117 )
+position = Vector2( 910.933, 487.962 )
+points = PoolVector2Array( -192, 96, -192, 40 )
 default_color = Color( 0.376471, 1, 0.286275, 1 )
 
 [node name="Label_Bevoelkerung" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
-margin_left = 23.0
-margin_top = 541.0
-margin_right = 279.0
-margin_bottom = 581.0
-custom_fonts/font = SubResource( 8 )
+margin_left = 30.9333
+margin_top = 527.962
+margin_right = 286.933
+margin_bottom = 584.962
+custom_fonts/font = SubResource( 12 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Gesamtbevölkerung:
 80.000.000"
@@ -238,11 +290,11 @@ __meta__ = {
 }
 
 [node name="Label_Infizierte" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
-margin_left = 351.0
-margin_top = 542.0
-margin_right = 462.0
-margin_bottom = 582.0
-custom_fonts/font = SubResource( 8 )
+margin_left = 310.933
+margin_top = 527.962
+margin_right = 428.933
+margin_bottom = 584.962
+custom_fonts/font = SubResource( 12 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Infizierte:
 80.000.000"
@@ -251,11 +303,11 @@ __meta__ = {
 }
 
 [node name="Label_Tote" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
-margin_left = 688.83
-margin_top = 542.0
-margin_right = 824.83
-margin_bottom = 605.0
-custom_fonts/font = SubResource( 1 )
+margin_left = 542.933
+margin_top = 527.962
+margin_right = 678.933
+margin_bottom = 590.962
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Tote:
 80.000.000"
@@ -264,11 +316,11 @@ __meta__ = {
 }
 
 [node name="Label_Genesene" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
-margin_left = 982.12
-margin_top = 543.851
-margin_right = 1118.12
-margin_bottom = 606.851
-custom_fonts/font = SubResource( 1 )
+margin_left = 726.933
+margin_top = 527.962
+margin_right = 862.933
+margin_bottom = 590.962
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Genesene:
 80.000.000"
@@ -280,132 +332,85 @@ __meta__ = {
 position = Vector2( 280, 420 )
 default_color = Color( 0, 0, 0, 1 )
 
-[node name="Coordinate_System" type="Control" parent="Control/TabContainer/COVID-19 Zahlen"]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Line2D2" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
-position = Vector2( 42.7579, 24.5548 )
-points = PoolVector2Array( 1100, 490, 133.593, 490 )
-width = 5.0
-default_color = Color( 0, 0, 0, 1 )
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D3" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
-position = Vector2( 42.6478, 24.5548 )
-points = PoolVector2Array( 1100, 490, 1075, 465 )
-width = 5.0
-default_color = Color( 0, 0, 0, 1 )
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D4" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
-position = Vector2( 42.6478, 24.5548 )
-points = PoolVector2Array( 1100, 490, 1075, 515 )
-width = 5.0
-default_color = Color( 0, 0, 0, 1 )
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
-position = Vector2( 176.778, 24.5548 )
-points = PoolVector2Array( 0, 30, 0, 490 )
-width = 5.0
-default_color = Color( 0, 0, 0, 1 )
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D5" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
-position = Vector2( 176.778, 24.2142 )
-points = PoolVector2Array( 0, 30, 25, 55 )
-width = 5.0
-default_color = Color( 0, 0, 0, 1 )
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D7" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
-position = Vector2( 176.778, 64.038 )
-points = PoolVector2Array( 21.905, 30, -162.095, 30 )
-width = 3.0
-default_color = Color( 0, 0, 0, 1 )
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D8" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
-position = Vector2( 176.778, 24.2142 )
-width = 3.0
-default_color = Color( 0, 0, 0, 1 )
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D6" type="Line2D" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
-position = Vector2( 176.778, 24.5548 )
-points = PoolVector2Array( 0, 30, -25, 55 )
-width = 5.0
-default_color = Color( 0, 0, 0, 1 )
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Label" type="Label" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
-margin_left = 1157.93
-margin_top = 498.49
-margin_right = 1228.93
-margin_bottom = 536.49
-custom_fonts/font = SubResource( 9 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Tage"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label2" type="Label" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
-margin_left = 98.3881
-margin_top = 11.4853
-margin_right = 258.388
-margin_bottom = 49.4853
-custom_fonts/font = SubResource( 9 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Betroffene"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label_Scale_infected" type="Label" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
-margin_left = 14.6832
-margin_top = 106.862
-margin_right = 130.683
-margin_bottom = 132.862
-custom_fonts/font = SubResource( 10 )
-custom_colors/font_color = Color( 1, 0.337255, 0.286275, 1 )
-text = "80.000.000"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label_Scale_dead" type="Label" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
-margin_left = 14.6832
-margin_top = 130.862
-margin_right = 130.683
-margin_bottom = 156.862
-custom_fonts/font = SubResource( 10 )
+[node name="Label_Scale_5" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
+margin_left = 46.9333
+margin_top = 91.962
+margin_right = 162.933
+margin_bottom = 117.962
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "80.000.000"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label_scale_cured" type="Label" parent="Control/TabContainer/COVID-19 Zahlen/Coordinate_System"]
-margin_left = 14.6832
-margin_top = 154.862
-margin_right = 130.683
-margin_bottom = 180.862
-custom_fonts/font = SubResource( 10 )
-custom_colors/font_color = Color( 0.376471, 1, 0.286275, 1 )
+[node name="Label_Scale_4" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
+margin_left = 46.9333
+margin_top = 171.962
+margin_right = 162.933
+margin_bottom = 197.962
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "80.000.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_Scale_3" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
+margin_left = 46.9333
+margin_top = 251.962
+margin_right = 162.933
+margin_bottom = 277.962
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "80.000.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_Scale_2" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
+margin_left = 46.9333
+margin_top = 339.962
+margin_right = 162.933
+margin_bottom = 365.962
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "80.000.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_Scale_1" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
+margin_left = 46.9333
+margin_top = 419.962
+margin_right = 162.933
+margin_bottom = 445.962
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "80.000.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_Scale_Tag" type="Label" parent="Control/TabContainer/COVID-19 Zahlen"]
+margin_left = 1046.93
+margin_top = 523.962
+margin_right = 1162.93
+margin_bottom = 549.962
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Tag 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control/TabContainer/COVID-19 Zahlen"]
+margin_left = 166.933
+margin_top = 19.962
+margin_right = 1315.93
+margin_bottom = 515.962
+texture = ExtResource( 13 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -414,10 +419,7 @@ __meta__ = {
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 3.0
-margin_top = 39.0
-margin_right = -3.0
-margin_bottom = -3.0
+margin_top = 26.0
 
 [node name="Line2D" type="Line2D" parent="Control/TabContainer/Wirtschaft"]
 position = Vector2( 67.4633, 505.989 )
@@ -428,10 +430,7 @@ default_color = Color( 1, 0.337255, 0.286275, 1 )
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 3.0
-margin_top = 39.0
-margin_right = -3.0
-margin_bottom = -3.0
+margin_top = 26.0
 
 [node name="Line2D2" type="Line2D" parent="Control/TabContainer/Politik"]
 position = Vector2( 141.488, 561.507 )
@@ -443,7 +442,7 @@ margin_left = 64.0
 margin_top = 736.0
 margin_right = 448.0
 margin_bottom = 1024.0
-texture = ExtResource( 10 )
+texture = ExtResource( 17 )
 expand = true
 stretch_mode = 1
 __meta__ = {
@@ -462,8 +461,8 @@ __meta__ = {
 [node name="Label_Resourcen" type="Label" parent="Control/TextureRect2/VBoxContainer_Resourcen"]
 margin_right = 320.0
 margin_bottom = 35.0
-custom_styles/normal = SubResource( 11 )
-custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 14 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Ressourcen"
 align = 1
@@ -488,7 +487,7 @@ margin_right = 78.0
 margin_bottom = 37.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-texture = ExtResource( 11 )
+texture = ExtResource( 18 )
 expand = true
 stretch_mode = 5
 
@@ -499,7 +498,7 @@ margin_right = 238.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Wirtschaft"
 valign = 1
@@ -511,7 +510,7 @@ margin_right = 320.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "100%"
 align = 2
@@ -528,7 +527,7 @@ margin_right = 78.0
 margin_bottom = 37.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-texture = ExtResource( 11 )
+texture = ExtResource( 19 )
 expand = true
 stretch_mode = 5
 
@@ -539,7 +538,7 @@ margin_right = 238.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Sicherheitskräfte"
 valign = 1
@@ -551,7 +550,7 @@ margin_right = 320.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "100%"
 align = 2
@@ -568,7 +567,7 @@ margin_right = 77.0
 margin_bottom = 37.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-texture = ExtResource( 11 )
+texture = ExtResource( 20 )
 expand = true
 stretch_mode = 5
 
@@ -579,7 +578,7 @@ margin_right = 239.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Gesundheitswesen"
 valign = 1
@@ -591,7 +590,7 @@ margin_right = 320.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "100%"
 align = 2
@@ -608,7 +607,7 @@ margin_right = 78.0
 margin_bottom = 37.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-texture = ExtResource( 11 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 5
 
@@ -619,7 +618,7 @@ margin_right = 238.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Intensivbetten"
 valign = 1
@@ -631,7 +630,7 @@ margin_right = 320.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "100%"
 align = 2
@@ -648,7 +647,7 @@ margin_right = 78.0
 margin_bottom = 37.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-texture = ExtResource( 11 )
+texture = ExtResource( 22 )
 expand = true
 stretch_mode = 5
 
@@ -659,7 +658,7 @@ margin_right = 238.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Zufriedenheit"
 valign = 1
@@ -671,24 +670,33 @@ margin_right = 320.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "100%"
 align = 2
 valign = 1
 
 [node name="Label_Tag" type="Label" parent="Control"]
-margin_left = 1447.68
-margin_top = 922.038
-margin_right = 1706.68
-margin_bottom = 1002.04
-custom_fonts/font = SubResource( 13 )
+margin_left = 1240.0
+margin_top = 776.0
+margin_right = 1499.0
+margin_bottom = 856.002
+custom_fonts/font = SubResource( 16 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Tag 999"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureRect3" type="TextureRect" parent="Control"]
+margin_left = 1640.0
+margin_top = 728.0
+margin_right = 1776.0
+margin_bottom = 904.0
+texture = ExtResource( 23 )
+expand = true
+stretch_mode = 5
 
 [node name="Karten" parent="." instance=ExtResource( 1 )]
 
