@@ -152,5 +152,5 @@ func _normalize_Graph_Points(frame_x_min, frame_x_max, frame_y_min, frame_y_max,
 
 
 func _on_AudioStreamPlayer_finished():
-	$AudioStreamPlayer.set_stream("res://cards_corona_bg_music_loop.wav")
+	$AudioStreamPlayer.set_stream(load("res://cards_corona_bg_music_loop.wav"))
 	$AudioStreamPlayer.play(0)
