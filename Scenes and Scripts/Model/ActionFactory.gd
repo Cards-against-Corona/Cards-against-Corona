@@ -27,7 +27,7 @@ static func generateActions(path: String):
 		Instance.health = card["consequence"][0]["value"]
 		Instance.satisfaction = card["consequence"][1]["value"]
 		Instance.economy = card["consequence"][2]["value"]
-		Instance.geld = card["costs"][2]["value"]
+		Instance.geld = 0 # deprecated
 		Instance.betten = card["costs"][0]["value"]
 		Instance.security = card["costs"][1]["value"]
 		instances.push_back(Instance)
