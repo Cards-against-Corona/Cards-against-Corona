@@ -477,6 +477,9 @@ __meta__ = {
 margin_right = 320.0
 margin_bottom = 37.0
 size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureRect_Icon_Wirtschaft" type="TextureRect" parent="Control/TextureRect2/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen/HBoxContainer_res_Wirtschaft"]
 margin_right = 78.0
