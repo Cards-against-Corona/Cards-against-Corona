@@ -13,15 +13,15 @@
 [ext_resource path="res://Assets/Ergebnisse/intensivbetten_status.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Ergebnisse/Sicherheitskräfte_status.png" type="Texture" id=12]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 size = 20
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 35
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 30
 font_data = ExtResource( 2 )
 
@@ -70,7 +70,7 @@ margin_left = -132.78
 margin_top = 26.4279
 margin_right = -56.7803
 margin_bottom = 76.4279
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "5"
 align = 1
 valign = 1
@@ -83,7 +83,7 @@ margin_left = -63.4158
 margin_top = 36.7473
 margin_right = 100.584
 margin_bottom = 63.7473
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "XY"
 align = 1
 valign = 1
@@ -96,7 +96,7 @@ margin_left = -115.0
 margin_top = 74.0
 margin_right = 114.0
 margin_bottom = 128.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "XY"
 autowrap = true
 __meta__ = {
@@ -198,11 +198,11 @@ scale = Vector2( 2.24395, 2.64717 )
 texture = ExtResource( 9 )
 
 [node name="Label" type="Label" parent="Infoübersicht"]
-margin_left = 1.20166
-margin_top = 63.9101
-margin_right = 468.202
-margin_bottom = 469.91
-custom_fonts/font = SubResource( 1 )
+margin_left = 20.5406
+margin_top = 58.6358
+margin_right = 487.541
+margin_bottom = 464.636
+custom_fonts/font = SubResource( 2 )
 text = "Dies sind die Vor- und Nachteile dieser Karte: Geld -100 Ansehen -15"
 autowrap = true
 __meta__ = {
@@ -214,7 +214,7 @@ margin_left = 300.4
 margin_top = 491.698
 margin_right = 567.15
 margin_bottom = 536.638
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Aktivieren"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -225,7 +225,7 @@ margin_left = 300.392
 margin_top = 560.32
 margin_right = 567.142
 margin_bottom = 605.26
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Schließen"
 __meta__ = {
 "_edit_use_anchors_": false

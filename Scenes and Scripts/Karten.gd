@@ -57,26 +57,36 @@ func Button_pressed(Instance):
 	Geldkosten = Instance.Geldkosten
 	Bettkosten = Instance.Bettenkosten    #Keine echten Kosten nur values
 	Seckosten = Instance.Securitykosten   #              "
-	if int(Health) >= 0:
+	if int(Health) > 0:
 		$"Infoübersicht/Sprite/Control/Gesundheitswesen_status/status_arrow_up".show()
-	else:
+	elif int(Health) < 0:
 		$"Infoübersicht/Sprite/Control/Gesundheitswesen_status/status_arrow_down".show()
-	if int(Befriedigung) >= 0:
+	else:
+		pass
+	if int(Befriedigung) > 0:
 		$"Infoübersicht/Sprite/Control/Zufriedenheit_status/status_arrow_up".show()
-	else:
+	elif int(Befriedigung) < 0:
 		$"Infoübersicht/Sprite/Control/Zufriedenheit_status/status_arrow_down".show()
-	if int(Geldkosten) >= 0:
+	else:
+		pass
+	if int(Geldkosten) > 0:
 		$"Infoübersicht/Sprite/Control/wirtschaft_status/status_arrow_up".show()
-	else:
+	elif int(Geldkosten) < 0:
 		$"Infoübersicht/Sprite/Control/wirtschaft_status/status_arrow_down".show()
-	if int(Seckosten) >= 0:
+	else:
+		pass
+	if int(Seckosten) > 0:
 		$"Infoübersicht/Sprite/Control/Sicherheitskräfte_status/status_arrow_up".show()
-	else:
+	elif int(Seckosten) < 0:
 		$"Infoübersicht/Sprite/Control/Sicherheitskräfte_status/status_arrow_down".show()
-	if int(Bettkosten) >= 0:
-		$"Infoübersicht/Sprite/Control/intensivbetten_status/status_arrow_up".show()
 	else:
+		pass
+	if int(Bettkosten) > 0:
+		$"Infoübersicht/Sprite/Control/intensivbetten_status/status_arrow_up".show()
+	elif int(Bettkosten) < 0:
 		$"Infoübersicht/Sprite/Control/intensiv_status/status_arrow_down".show()
+	else:
+		pass
 
 func _on_Aktivieren_pressed():
 	$"Infoübersicht".hide()
