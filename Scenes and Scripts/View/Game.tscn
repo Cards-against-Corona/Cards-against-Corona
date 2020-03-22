@@ -8,8 +8,6 @@
 [ext_resource path="res://Assets/Fonts/Carlito-Bold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Assets/Fonts/Carlito-Regular.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Scenes and Scripts/View/Game.gd" type="Script" id=8]
-
-[sub_resource type="DynamicFont" id=1]
 [ext_resource path="res://Scenes and Scripts/active_button.stylebox" type="StyleBox" id=9]
 [ext_resource path="res://Assets/Aktuelles/Frame_Aktuelles.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Ressourcen/Frame_Button_Ressource.png" type="Texture" id=11]
@@ -27,8 +25,6 @@
 [ext_resource path="res://Assets/RechtsUnten/Deutschlandkarte.png" type="Texture" id=23]
 
 [sub_resource type="DynamicFont" id=1]
-size = 25
-font_data = ExtResource( 7 )
 
 [sub_resource type="Theme" id=2]
 
