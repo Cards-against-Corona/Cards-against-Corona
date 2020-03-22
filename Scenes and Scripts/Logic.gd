@@ -66,11 +66,11 @@ func _init():
 func _ready():
 	pass # Replace with function body.
 
-func registerCard(name):
+func registerCard(card):
 	#instant costs
 	pass
 
-func registerEvent(name):
+func registerEvent(event):
 	pass
 
 # This function calculates the new infections, deads and cures per day
