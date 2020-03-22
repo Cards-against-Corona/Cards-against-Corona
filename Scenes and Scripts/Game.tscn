@@ -42,27 +42,27 @@ font_data = ExtResource( 7 )
 size = 29
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=7]
 size = 37
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="DynamicFont" id=8]
 size = 25
 font_data = ExtResource( 7 )
 
-[sub_resource type="Theme" id=7]
-
-[sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 0.313726, 0.313726, 0.313726, 1 )
-
-[sub_resource type="DynamicFont" id=9]
-size = 34
-font_data = ExtResource( 6 )
+[sub_resource type="Theme" id=9]
 
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.313726, 0.313726, 0.313726, 1 )
 
 [sub_resource type="DynamicFont" id=11]
+size = 34
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[sub_resource type="DynamicFont" id=13]
 size = 80
 font_data = ExtResource( 6 )
 
@@ -283,7 +283,7 @@ margin_left = 1157.93
 margin_top = 498.49
 margin_right = 1228.93
 margin_bottom = 536.49
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Tage"
 __meta__ = {
@@ -295,7 +295,7 @@ margin_left = 98.3881
 margin_top = 11.4853
 margin_right = 258.388
 margin_bottom = 49.4853
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Betroffene"
 __meta__ = {
@@ -307,7 +307,7 @@ margin_left = 14.6832
 margin_top = 106.862
 margin_right = 130.683
 margin_bottom = 132.862
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 0.337255, 0.286275, 1 )
 text = "80.000.000"
 __meta__ = {
@@ -319,7 +319,7 @@ margin_left = 14.6832
 margin_top = 130.862
 margin_right = 130.683
 margin_bottom = 156.862
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "80.000.000"
 __meta__ = {
@@ -331,7 +331,7 @@ margin_left = 14.6832
 margin_top = 154.862
 margin_right = 130.683
 margin_bottom = 180.862
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0.376471, 1, 0.286275, 1 )
 text = "80.000.000"
 __meta__ = {
@@ -371,7 +371,7 @@ margin_left = 64.0
 margin_top = 58.0
 margin_right = 520.0
 margin_bottom = 426.0
-theme = SubResource( 7 )
+theme = SubResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -379,8 +379,8 @@ __meta__ = {
 [node name="Label_Aktuelles" type="Label" parent="Control/VBoxContainer_Aktuelles"]
 margin_right = 456.0
 margin_bottom = 35.0
-custom_styles/normal = SubResource( 8 )
-custom_fonts/font = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Aktuelles"
 align = 1
@@ -442,10 +442,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Control/VBoxContainer_Resourcen"]
-margin_right = 454.0
+margin_right = 453.0
 margin_bottom = 35.0
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 9 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Ressourcen"
 align = 1
@@ -453,7 +453,7 @@ uppercase = true
 
 [node name="VBoxContainer_Resourcen_innen" type="VBoxContainer" parent="Control/VBoxContainer_Resourcen"]
 margin_top = 39.0
-margin_right = 454.0
+margin_right = 453.0
 margin_bottom = 265.0
 size_flags_vertical = 3
 __meta__ = {
@@ -461,7 +461,7 @@ __meta__ = {
 }
 
 [node name="Label_Betten" type="Label" parent="Control/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen"]
-margin_right = 454.0
+margin_right = 453.0
 margin_bottom = 72.0
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
 size_flags_vertical = 3
@@ -475,7 +475,7 @@ __meta__ = {
 
 [node name="Label_Polizei" type="Label" parent="Control/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen"]
 margin_top = 76.0
-margin_right = 454.0
+margin_right = 453.0
 margin_bottom = 148.0
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
 size_flags_vertical = 3
@@ -489,7 +489,7 @@ __meta__ = {
 
 [node name="Label_Geld" type="Label" parent="Control/VBoxContainer_Resourcen/VBoxContainer_Resourcen_innen"]
 margin_top = 152.0
-margin_right = 454.0
+margin_right = 453.0
 margin_bottom = 226.0
 rect_pivot_offset = Vector2( 72.5416, 25.5003 )
 size_flags_vertical = 3
@@ -506,7 +506,7 @@ margin_left = 1585.69
 margin_top = 843.492
 margin_right = 1762.69
 margin_bottom = 923.492
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Tag 999"
 valign = 1
