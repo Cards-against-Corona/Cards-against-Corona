@@ -1,9 +1,16 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/Ergebnisse/card_title.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Fonts/Carlito-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Assets/Fonts/Carlito-Italic.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scenes and Scripts/View/EineKarte.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Ergebnisse/wirtschaft_status.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Ergebnisse/Zufriedenheit_status.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Ergebnisse/Gesundheitswesen_status.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Ergebnisse/Sicherheitskräfte_status.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Ergebnisse/intensivbetten_status.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Ergebnisse/status_arrow_up.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Ergebnisse/status_arrow_down.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -31,10 +38,10 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 
 [node name="Handlung" type="Label" parent="."]
-margin_left = 74.2594
-margin_top = 219.221
-margin_right = 215.26
-margin_bottom = 241.221
+margin_left = 62.0
+margin_top = 215.0
+margin_right = 244.0
+margin_bottom = 245.0
 custom_fonts/font = SubResource( 1 )
 text = "Handlung XY"
 align = 1
@@ -67,3 +74,97 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Control" type="Control" parent="."]
+margin_left = 62.0
+margin_top = 314.0
+margin_right = 207.0
+margin_bottom = 345.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gesundheitswesen_status" type="Sprite" parent="Control"]
+position = Vector2( 17.236, 14.81 )
+scale = Vector2( 0.236, 0.221 )
+texture = ExtResource( 7 )
+
+[node name="up" type="Sprite" parent="Control/Gesundheitswesen_status"]
+visible = false
+position = Vector2( 37.1077, 0.354736 )
+scale = Vector2( 2.18663, 2.63243 )
+texture = ExtResource( 10 )
+
+[node name="down" type="Sprite" parent="Control/Gesundheitswesen_status"]
+visible = false
+position = Vector2( 37.8672, 2.78802 )
+scale = Vector2( 2.18663, 2.63243 )
+texture = ExtResource( 11 )
+
+[node name="wirtschaft_status" type="Sprite" parent="Control"]
+position = Vector2( 44.974, 14.81 )
+scale = Vector2( 0.236222, 0.220634 )
+texture = ExtResource( 5 )
+
+[node name="down" type="Sprite" parent="Control/wirtschaft_status"]
+visible = false
+position = Vector2( 38.0206, 3.60492 )
+scale = Vector2( 2.18457, 2.63679 )
+texture = ExtResource( 11 )
+
+[node name="up" type="Sprite" parent="Control/wirtschaft_status"]
+visible = false
+position = Vector2( 38.0206, -2.89435 )
+scale = Vector2( 2.18457, 2.63679 )
+texture = ExtResource( 10 )
+
+[node name="Sicherheitskräfte_status" type="Sprite" parent="Control"]
+position = Vector2( 71.7947, 14.8098 )
+scale = Vector2( 0.236, 0.221 )
+texture = ExtResource( 8 )
+
+[node name="down" type="Sprite" parent="Control/Sicherheitskräfte_status"]
+visible = false
+position = Vector2( 44.411, 1.97784 )
+scale = Vector2( 2.18663, 2.63243 )
+texture = ExtResource( 11 )
+
+[node name="up" type="Sprite" parent="Control/Sicherheitskräfte_status"]
+visible = false
+position = Vector2( 42.8921, -4.51025 )
+scale = Vector2( 2.18663, 2.63243 )
+texture = ExtResource( 10 )
+
+[node name="intensivbetten_status" type="Sprite" parent="Control"]
+position = Vector2( 99.2039, 14.81 )
+scale = Vector2( 0.236, 0.221 )
+texture = ExtResource( 9 )
+
+[node name="down" type="Sprite" parent="Control/intensivbetten_status"]
+visible = false
+position = Vector2( 40.3879, 1.97681 )
+scale = Vector2( 2.18663, 2.63243 )
+texture = ExtResource( 11 )
+
+[node name="up" type="Sprite" parent="Control/intensivbetten_status"]
+visible = false
+position = Vector2( 38.8691, -2.88953 )
+scale = Vector2( 2.18663, 2.63243 )
+texture = ExtResource( 10 )
+
+[node name="Zufriedenheit_status" type="Sprite" parent="Control"]
+position = Vector2( 127.442, 15.3648 )
+scale = Vector2( 0.236, 0.221 )
+texture = ExtResource( 6 )
+
+[node name="down" type="Sprite" parent="Control/Zufriedenheit_status"]
+visible = false
+position = Vector2( 46.9553, 1.97693 )
+scale = Vector2( 2.18663, 2.63243 )
+texture = ExtResource( 11 )
+
+[node name="up" type="Sprite" parent="Control/Zufriedenheit_status"]
+visible = false
+position = Vector2( 39.3602, -2.88953 )
+scale = Vector2( 2.18663, 2.63243 )
+texture = ExtResource( 10 )
