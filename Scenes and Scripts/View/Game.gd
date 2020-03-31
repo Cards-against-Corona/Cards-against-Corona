@@ -42,6 +42,8 @@ const day_scaleup = 5
 func _ready():
 	logic.FinishDay()
 	_update_graph()
+	_update_resource_counters()
+	_update_infection_counters()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
