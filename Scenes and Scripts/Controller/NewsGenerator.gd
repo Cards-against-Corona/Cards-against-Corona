@@ -14,7 +14,7 @@ func generateSpecifcNews(color: String, title: String, newsFormat: String, curre
 		var newNews = Action.new()
 		newNews.name = title
 		newNews.beschreibung = newsFormat % limit
-		newNews.iconpath = "../Assets/%s.png" % color
+		newNews.iconpath = "res://Assets/%s.png" % color
 		print("Generated news with name: %s" % newNews.name)
 		print("Generated news with description: %s" % newNews.beschreibung)
 		return newNews

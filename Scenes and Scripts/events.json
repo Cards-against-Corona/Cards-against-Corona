@@ -1,33 +1,83 @@
 [
   {
-    "name": "Hamsterkäufe",
-    "icon": "res://Assets/Aktuelles/Bild_grenzschließung.png",
-    "description": "Besorgte Bürger leeren die Supermarktregale",
-    "effectivity": 1,
+    "name": "Aktiencrash",
+    "icon": "res://Assets/cards/ausgangssperre.png",
+    "description": "Der DAX rauscht in den Keller",
+    "effectivity": "3",
     "consequence": [
       {
-        "target": "one of HEALTH_SYSTEM, SATISFACTION, ECONOMY, CRITICAL_CARE_BEDS, SECURITY_RESSOURCES, CASH",
-        "icon": "xyz.png",
-        "description": "...",
-        "type": "one of INSTANT, DAILY",
-        "value": 5,
-        "source": ""
+        "target": "ECONOMY",
+        "type": "INSTANT",
+        "value": -10
       },
       {
-        "target": "one of HEALTH_SYSTEM, SATISFACTION, ECONOMY, CRITICAL_CARE_BEDS, SECURITY_RESSOURCES, CASH",
-        "icon": "xyz.png",
-        "description": "...",
-        "type": "one of INSTANT, DAILY",
-        "value": 5,
-        "source": ""
+        "target": "SATISFACTION",
+        "type": "INSTANT",
+        "value": -5
+      }
+    ]
+  },
+  {
+    "name": "Ausgangssperre Ignoriert",
+    "icon": "res://Assets/cards/ausgangssperre.png",
+    "description": "Die Mensche ignorieren die Ausganssperre",
+    "effectivity": "3",
+    "consequence": [
+      {
+        "target": "SECURITY_RESSOURCES",
+        "type": "INSTANT",
+        "value": -10
       },
       {
-        "target": "one of HEALTH_SYSTEM, SATISFACTION, ECONOMY, CRITICAL_CARE_BEDS, SECURITY_RESSOURCES, CASH",
-        "icon": "xyz.png",
-        "description": "...",
-        "type": "one of INSTANT, DAILY",
-        "value": 5,
-        "source": ""
+        "target": "SATISFACTION",
+        "type": "INSTANT",
+        "value": -5
+      },
+      {
+        "target": "HEALTH_SYSTEM",
+        "type": "DAILY",
+        "value": -10
+      }
+    ]
+  },
+  {
+    "name": "Ausbruch im Nachbarland",
+    "icon": "res://Assets/cards/ausgangssperre.png",
+    "description": "Im Nachbarland bricht das Virus aus",
+    "effectivity": "3",
+    "consequence": [
+      {
+        "target": "SECURITY_RESSOURCES",
+        "type": "INSTANT",
+        "value": -10
+      },
+      {
+        "target": "SATISFACTION",
+        "type": "INSTANT",
+        "value": -5
+      },
+      {
+        "target": "CRITICAL_CARE_BEDS",
+        "type": "INSTANT",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "name": "Hamsterkäufe",
+    "icon": "res://Assets/cards/ausgangssperre.png",
+    "description": "Die Menschen hamstern Klopapier",
+    "effectivity": "3",
+    "consequence": [
+      {
+        "target": "ECONOMY",
+        "type": "INSTANT",
+        "value": -10
+      },
+      {
+        "target": "SATISFACTION",
+        "type": "INSTANT",
+        "value": -5
       }
     ]
   }
