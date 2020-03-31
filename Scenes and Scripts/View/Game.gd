@@ -41,6 +41,7 @@ const day_scaleup = 5
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	logic.FinishDay()
+	_update_graph()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -51,6 +52,10 @@ func _scale_up_if_necssary(current_max, current_day):
 	while current_max > scale_max:
 		scale_max*=scaleup_factor
 	
+		# Make maximum scale a n*power of ten
+		var scale_pow = pow(10, floor(log(scale_max)/log(10)))
+		scale_max = floor(scale_max/scale_pow)*scale_pow
+
 	while current_day > day_scale:
 		day_scale += day_scaleup
 
@@ -85,19 +90,21 @@ func _update_graph():
 	for point in temp_points:
 		$"Control/TabContainer/COVID-19 Zahlen/Line2D_Genesene".add_point(point)
 	
-	var scale_step = _get_y_labeling_max(scale_max)/5
-	$"Control/TabContainer/COVID-19 Zahlen/Label_Scale_1".text = str(scale_step)
-	$"Control/TabContainer/COVID-19 Zahlen/Label_Scale_1".yPosition
-	$"Control/TabContainer/COVID-19 Zahlen/Label_Scale_2".text = str(scale_step * 2)
-	$"Control/TabContainer/COVID-19 Zahlen/Label_Scale_3".text = str(scale_step * 3)
-	$"Control/TabContainer/COVID-19 Zahlen/Label_Scale_4".text = str(scale_step * 4)
-	$"Control/TabContainer/COVID-19 Zahlen/Label_Scale_5".text = str(scale_step * 5)
+	var scale_step = scale_max/5
+	_update_y_label($"Control/TabContainer/COVID-19 Zahlen/Label_Scale_1", 1,
+		scale_step)
+	_update_y_label($"Control/TabContainer/COVID-19 Zahlen/Label_Scale_2", 2,
+		scale_step)
+	_update_y_label($"Control/TabContainer/COVID-19 Zahlen/Label_Scale_3", 3,
+		scale_step)
+	_update_y_label($"Control/TabContainer/COVID-19 Zahlen/Label_Scale_4", 4,
+		scale_step)
+	_update_y_label($"Control/TabContainer/COVID-19 Zahlen/Label_Scale_5", 5,
+		scale_step)
 
-func _get_y_labeling_max(actual_max):
-	var y_label_max = log(actual_max)/log(10)
-	y_label_max = floor(y_label_max)
-	y_label_max = pow(10, y_label_max)
-	return y_label_max
+func _update_y_label(label, factor, scale_step):
+	label.text = str(factor * scale_step)
+
 
 func _update_resource_counters():
 	# Update Resource counters
@@ -167,10 +174,7 @@ func _normalize_Graph_Points(frame_x_min, frame_x_max, frame_y_min, frame_y_max,
 		x_step_size = ( frame_x_max - frame_x_min ) / ( day_scale )
 	
 	# normalize y values and write to return
-	var temp_array = []
-	# which of the inputted arrays shall be normalized and returned
-	temp_array = input_array
-
+	var temp_array = input_array
 
 	for i in temp_array.size():
 		x_temp_px = frame_x_min + x_step_size * i
